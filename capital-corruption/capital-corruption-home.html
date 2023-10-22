@@ -16,6 +16,59 @@
 <body>
     <script type="text/babel" data-presets="react,stage-3">
 
+        const Category = (props) => {
+            const { name, description, link } = props
+            return (
+
+                <div class="col-sm-4">
+                    <a href={link} className="category-link">
+                        <div class="card h-100" style={{ borderRadius: "0px" }}>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{name}</h5>
+                                <p class="card-text">{description}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            )
+        }
+
+        const GalleryView = () => {
+            const categories = [
+                {
+                    "name": "Crimes & Scandals",
+                    "link": "",
+                    "description": "Corruption and scandal have long been a part of NY state politics.  In 1882, a young   Teddy Roosevelt referred to his fellow assemblymen as “viscous, stupid looking scoundrels with apparently not a redeeming trait.”"
+                },
+                {
+                    "name": "Learn the Trade",
+                    "link": "",
+                    "description": "A culture of corruption begins with the phrase “that’s just the way it’s done” – half resignation and half understanding that you need to play the game to get along. "
+                },
+                {
+                    "name": "The Fight Against Corruption",
+                    "link": "",
+                    "description": "Over the years, several commissions have sought to combat corruption and promote ethical governance."
+                }
+
+            ]
+
+            const categoriesList = categories.map((category, index) => {
+                const { name, link, description } = category
+                return <Category name={name} link={link} description={description} />
+            })
+
+            return (
+                <div className="row" style={{ maxWidth: "80%", margin: "auto" }}>
+                    {categoriesList}
+                </div>
+            )
+        }
+
+        const MapView = () => {
+            return <h1>Map View</h1>
+        }
+
         const TheCapitalCorruptionHomePage = () => {
             const { useEffect, useState } = React
 
@@ -32,7 +85,7 @@
                 <>
                     <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
                         <ol class="breadcrumb" style={{ backgroundColor: "#202020" }}>
-                            <li className="breadcrumb-item"><a href="hattps://museumofpoliticalcorruption.org/the-albany-room/" className="inactive-link albany-room-home-link"><li>The Albany Room Home</li></a></li>
+                            <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/" className="inactive-link albany-room-home-link"><li>The Albany Room Home</li></a></li>
                             <li className="breadcrumb-item active current-page" aria-current="page">Capital Corruption Home</li>
                         </ol>
                     </nav>
@@ -42,9 +95,14 @@
                         <div className={!galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(false)}>Map View</div>
                     </div>
 
+                    <div className="toggle-view-div d-flex align-items-center justify-content-center mpc-section">
+                        <p className="directions"><b>Learn more about the state-level corruption in Albany by selecting a category below.</b></p>
+                    </div>
+
                     {
-                        galleryView ? <h1>Gallery View</h1> : <h1>Map View</h1>
+                        galleryView ? <GalleryView /> : <h1>Map View</h1>
                     }
+
                 </>);
         };
 
