@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
-    <link rel="stylesheet" href="municipal-mischief-home.css">
+    <link rel="stylesheet" href="crimes-and-scandals.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         const Category = (props) => {
             const { name, description, link } = props
             return (
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <a href={link} className="category-link">
                         <div class="card h-100" style={{ borderRadius: "0px" }}>
                             <div class="card-body text-center">
@@ -35,24 +35,19 @@
         const GalleryView = () => {
             const categories = [
                 {
-                    "name": "Political Machines",
-                    "link": "https://museumofpoliticalcorruption.org/political-machines/",
-                    "description": "A political machine was a system for a party to maintain  power, often through patronage, nepotism, kickbacks, extortion or through other illegal or unethical means. "
+                    "name": "The Legislature for  $ale",
+                    "link": "",
+                    "description": "In 1888, the journalist Nellie Bly went undercover and, posing as a lobbyist, proved it was possible to purchase the legislature to pass or kill any bill.  The price she was asked to pay was $1,250. "
                 },
                 {
-                    "name": "The Hotels",
-                    "link": "https://museumofpoliticalcorruption.org/the-hotels/",
-                    "description": "Albany’s historic hotels, many of which no longer exist, offered a way station for travelers and a destination  where the rich and powerful could influence local and  state politics. "
+                    "name": "The Governor’s Suite",
+                    "link": "",
+                    "description": "New York’s top executives have not been immune from abusing their power in financial or sexual scandals. "
                 },
                 {
-                    "name": "The Newspapers",
-                    "link": "https://museumofpoliticalcorruption.org/the-newspapers/",
-                    "description": "Long before today’s left and right leaning media outlets, Albany, like many cities, had newspapers that catered specifically to Democrats and those that specifically catered to Republicans.  "
-                },
-                {
-                    "name": "The Fight Against Corruption",
-                    "link": "https://museumofpoliticalcorruption.org/municipal-mischief-the-fight-against-corruption/",
-                    "description": "In the 1940’s Governor Thomas E. Dewey initiated investigations into the seemingly indestructible Corning-O’Connell machine, but the investigations proved largely unsuccessful. "
+                    "name": "Law-Challenged Lawmakers",
+                    "link": "",
+                    "description": "There is a long litany of New York lawmakers that have found themselves on the wrong side of the law, convicted or otherwise sanctioned for behaving badly. "
                 }
             ]
 
@@ -68,48 +63,27 @@
             )
         }
 
-        const MapView = () => {
-            return <h1>Map View</h1>
-        }
-
-        const TheMunicipalMischiefHomePage = () => {
-            const { useEffect, useState } = React
-
-            const [galleryView, setGalleryView] = useState(true)
-
-            const handleToggle = (value) => {
-                setGalleryView(value)
-            }
-
-            const activeToggle = "toggle-btn active-btn"
-            const inactiveToggle = "toggle-btn inactive-btn"
-
+        const CrimesAndScandalsHomePage = () => {
             return (
                 <>
                     <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
                         <ol class="breadcrumb" style={{ backgroundColor: "#202020" }}>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/" className="inactive-link albany-room-home-link"><li>The Albany Room Home</li></a></li>
-                            <li className="breadcrumb-item active current-page" aria-current="page">Capital Corruption Home</li>
+                            <li className="breadcrumb-item active current-page" aria-current="page"><a href="/google.com">Capital Corruption Home</a></li>
+                            <li className="breadcrumb-item active current-page" aria-current="page">Crimes & Scandals</li>
+                           {/*<li className="breadcrumb-item active current-page" aria-current="page">Crimes & Scandals</li>*/}
                         </ol>
                     </nav>
 
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center">
-                        <div className={galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(true)}>Gallery View</div>
-                        <div className={!galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(false)}>Map View</div>
-                    </div>
-
                     <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
-                        <p className="directions"><b>Learn more about the local  corruption in Albany by selecting a category below.</b></p>
+                        <p className="directions"><b>Learn more about the crimes and scandals that took place in Albany by selecting a category below.</b></p>
                     </div>
 
-                    {
-                        galleryView ? <GalleryView /> : <h1>Map View</h1>
-                    }
-
+                    <GalleryView />
                 </>);
         };
 
-        ReactDOM.render(<TheMunicipalMischiefHomePage />, document.getElementById("root"));
+        ReactDOM.render(<CrimesAndScandalsHomePage />, document.getElementById("root"));
     </script>
 
     <div id="root"></div>
