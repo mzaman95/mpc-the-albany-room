@@ -148,24 +148,31 @@
   margin-bottom: 0px !important;
 }
 
-.btn-close-white:hover {
-  background-color: #202020 !important;
-}
-
-.location-address {
-  font-family: "Gotham Bold";
-  text-transform: uppercase;
+.image-credit {
+  font-family: "Gotham Book", sans-serif;
+  color: #b5b5b5;
   font-size: 12px;
 }
 
-.link-section-name {
+.location-to-page-link {
+  font-family: "Covered By Your Grace", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
   color: #9933cc;
+  text-decoration: none;
 }
 
-.link-section-name:hover {
+.location-to-page-link:hover {
   color: #b758e7;
+  text-decoration: underline;
 }
 
 .location-details {
-  font-size: 14px;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  color: #202020;
+}
+
+button:hover {
+  background-color: transparent;
 }

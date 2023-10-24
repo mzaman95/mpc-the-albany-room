@@ -157,7 +157,7 @@
 
         const LocationHotSpot = (props) => {
             const { location } = props
-            const { id, placement, name, description, address, image, linkSectionName, linkSectionURL } = location
+            const { id, placement, name, description, address, image, imageCredit, linkSectionName, linkSectionURL } = location
             const dataBsTarget = "#" + id
 
             return (
@@ -171,15 +171,16 @@
                             <div className="modal-content text-center">
                                 <div className="modal-header">
                                     <h3 className="modal-title">{name}</h3>
-                                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div className="modal-body">
                                     <img src={image} alt={name} className="img-fluid" />
-                                    <span className="location-address">{address}</span>
+                                    <span className="image-credit" >{imageCredit}</span>
                                     <br />
                                     <br />
-                                    <p className="location-details">{description}</p>
-                                    <p className="location-details">Learn more about it in <a className="link-section-name" href={linkSectionURL}>{linkSectionName}</a>.</p>
+                                    <p className="location-details">{address}</p>
+                                    <p className="location-details"><b>{description}</b></p>
+                                    <p className="location-details">Learn more about it in <a className="location-to-page-link" href={linkSectionURL}>{linkSectionName}</a>.</p>
                                 </div>
                             </div>
                         </div>
