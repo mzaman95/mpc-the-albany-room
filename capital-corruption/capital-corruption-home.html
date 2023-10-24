@@ -37,7 +37,7 @@
                 {
                     "name": "Crimes & Scandals",
                     "link": "https://museumofpoliticalcorruption.org/crimes-and-scandals/",
-                    "description": "Corruption and scandal have long been a part of NY state politics.  In 1882, a young   Teddy Roosevelt referred to his fellow assemblymen as “viscous, stupid looking scoundrels with apparently not a redeeming trait.”"
+                    "description": "Corruption and scandal have long been a part of NY state politics."
                 },
                 {
                     "name": "Learn the Trade",
@@ -58,9 +58,14 @@
             })
 
             return (
-                <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
-                    {categoriesList}
-                </div>
+                <>
+                    <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
+                        <p className="directions"><b>Select a category to learn more about the state-level corruption in Albany.</b></p>
+                    </div>
+                    <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
+                        {categoriesList}
+                    </div>
+                </>
             )
         }
 
@@ -92,10 +97,6 @@
                     <div className="toggle-view-div d-flex align-items-center justify-content-center">
                         <div className={galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(true)}>Gallery View</div>
                         <div className={!galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(false)}>Map View</div>
-                    </div>
-
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
-                        <p className="directions"><b>Learn more about the state-level corruption in Albany by selecting a category below.</b></p>
                     </div>
 
                     {

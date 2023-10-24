@@ -62,9 +62,14 @@
             })
 
             return (
-                <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
-                    {categoriesList}
-                </div>
+                <>
+                    <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
+                        <p className="directions"><b>Learn more about the local  corruption in Albany by selecting a category below.</b></p>
+                    </div>
+                    <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
+                        {categoriesList}
+                    </div>
+                </>
             )
         }
 
@@ -96,10 +101,6 @@
                     <div className="toggle-view-div d-flex align-items-center justify-content-center">
                         <div className={galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(true)}>Gallery View</div>
                         <div className={!galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(false)}>Map View</div>
-                    </div>
-
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
-                        <p className="directions"><b>Learn more about the local  corruption in Albany by selecting a category below.</b></p>
                     </div>
 
                     {
