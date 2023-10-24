@@ -8,7 +8,8 @@
     },
     "address": "SE corner Broadway & Maiden Lane",
     "description": "Popular with local and state legislators, the notorious William “Boss” Tweed stayed in room 450 for many years when he ran Tammany Hall.  ",
-    "image": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/stanwix-hall.png",
+    "imageCredit": "New York Public Library, CCO 1.0 Dedication",
     "linkSectionName": "The Hotels",
     "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
   },
@@ -21,7 +22,8 @@
     },
     "address": "East side Broadway between Columbia & Steuben",
     "description": "While staying here, Teddy Roosevelt watched as bags of cash were doled out to legislators to pass or kill bills. ",
-    "image": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/delevan-house.png ",
+    "imageCredit": "",
     "linkSectionName": "The Hotels",
     "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
   },
@@ -34,7 +36,8 @@
     },
     "address": "74 North Pearl St.",
     "description": "In 1888, New York World reporter Nellie Bly posed as a lobbyist and met with Mr. Edward R. Phelps, the “King of the Lobby”, in Room 96 at the Kenmore to prove that many New York legislators were bribable.",
-    "image": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg ",
+    "imageCredit": "Photo by Chuck Miller",
     "linkSectionName": "The Hotels",
     "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
   },
@@ -47,7 +50,8 @@
     },
     "address": "State St. and Washington Ave",
     "description": "Built between 1867 and 1899, the opulent State Capitol building has been the site of many corruption scandals. ",
-    "image": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/state-capitol.jpeg ",
+    "imageCredit": "Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons",
     "linkSectionName": "Crimes & Scandals",
     "linkSectionURL": "https://museumofpoliticalcorruption.org/crimes-and-scandals/"
   },
@@ -60,7 +64,8 @@
     },
     "address": "144 State St.",
     "description": "The DeWitt Clinton was known as the “Democrat’s Hotel” and was the center for backroom dealmaking.",
-    "image": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dewitt-clinton-hotel.jpg",
+    "imageCredit": "Kheel Center, CC BY 2.0, via Wikimedia Commons",
     "linkSectionName": "The Hotels",
     "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
   },
@@ -73,7 +78,8 @@
     },
     "address": "NW corner State & North Pearl St.",
     "description": "The Ten Eyck was the “Republican’s Hotel.”",
-    "image": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/ten-eyck-hotel.png",
+    "imageCredit": "Photo by Jim Burns",
     "linkSectionName": "The Hotels",
     "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
   }
