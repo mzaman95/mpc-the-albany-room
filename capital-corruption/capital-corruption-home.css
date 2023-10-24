@@ -32,6 +32,8 @@
   background-color: white;
 }
 
+/* Gallery View */
+
 .directions {
   font-family: "Gotham Book", sans-serif;
   font-size: 16px;
@@ -63,4 +65,100 @@
 .card:hover {
   color: white !important;
   background-color: #9933cc;
+}
+
+/* Map View */
+.capital-corruption-map-view {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.downtown-albany-map {
+  filter: grayscale(100%) !important;
+  opacity: 0.65 !important;
+}
+.hotspots {
+  position: relative;
+}
+.hotspots img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes expand-hotspot {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  color: #9933cc;
+  font-size: 18px;
+}
+
+.hotspot-inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9933cc;
+  padding: 10px;
+}
+
+.hotspot-outer-circle {
+  animation: expand-hotspot 2s infinite;
+  width: 20px;
+  height: 20px;
+  background-color: #9933cc;
+  padding: 4px;
+}
+
+.hotspot-inner-circle,
+.hotspot-outer-circle {
+  content: "";
+  display: inline-block;
+  box-sizing: content-box;
+  border-radius: 50%;
+}
+
+.modal {
+  font-family: "Gotham";
+}
+
+.modal-header {
+  background-color: #9933cc;
+  color: white;
+}
+
+.modal-title {
+  font-family: "Gotham Bold";
+}
+
+.location-address {
+  font-family: "Gotham Bold";
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.link-section-name {
+  color: #9933cc;
+}
+
+.link-section-name:hover {
+  color: #b758e7;
+}
+
+.location-details {
+  font-size: 14px;
 }
