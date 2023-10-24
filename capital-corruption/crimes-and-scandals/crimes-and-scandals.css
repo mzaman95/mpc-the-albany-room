@@ -1,5 +1,6 @@
 .breadcrumb-item {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
 }
 
 .inactive-link {
@@ -8,10 +9,6 @@
 
 .inactive-link:hover {
   color: #f9ddff;
-}
-
-.current-page {
-  font-family: "Gotham Medium", sans-serif;
 }
 
 .toggle-btn {
