@@ -171,7 +171,7 @@
                             <div className="modal-content text-center">
                                 <div className="modal-header">
                                     <h3 className="modal-title">{name}</h3>
-                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div className="modal-body">
                                     <img src={image} alt={name} className="img-fluid" />
@@ -195,12 +195,17 @@
             })
 
             return (
-                <div className="capital-corruption-map-view">
-                    <div className="hotspots">
-                        <img className="downtown-albany-map" src="https://museumofpoliticalcorruption.org/wp-content/uploads/2023/09/downtownAlbanyMap.png" alt="Map of Downtown Albany" />
-                        {locationHotspots}
+                <>
+                    <div className="capital-corruption-map-view">
+                        <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
+                            <p className="directions"><b>Click on the hotspots to learn about each of the locations.</b></p>
+                        </div>
+                        <div className="hotspots">
+                            <img className="downtown-albany-map" src="https://museumofpoliticalcorruption.org/wp-content/uploads/2023/09/downtownAlbanyMap.png" alt="Map of Downtown Albany" />
+                            {locationHotspots}
+                        </div>
                     </div>
-                </div>
+                </>
             )
         }
 

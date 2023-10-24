@@ -9,6 +9,7 @@
 
 .inactive-link:hover {
   color: #f9ddff;
+  text-decoration: underline;
 }
 
 .toggle-btn {
@@ -75,8 +76,8 @@
 
 .downtown-albany-map {
   filter: grayscale(100%) !important;
-  opacity: 0.65 !important;
 }
+
 .hotspots {
   position: relative;
 }
@@ -138,11 +139,17 @@
 
 .modal-header {
   background-color: #9933cc;
-  color: white;
 }
 
 .modal-title {
-  font-family: "Gotham Bold";
+  color: white !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px !important;
+}
+
+.btn-close-white:hover {
+  background-color: #202020 !important;
 }
 
 .location-address {
