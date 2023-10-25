@@ -1,0 +1,121 @@
+/*
+Breadcrumbs
+*/
+.breadcrumb-item {
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+}
+
+.inactive-link {
+  color: #fff;
+}
+
+.inactive-link:hover {
+  color: #f9ddff;
+}
+
+/*
+Header Section
+*/
+.header-section {
+  padding-top: 40px;
+  text-align: center;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: white;
+}
+
+.teaser-text {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 30px !important;
+  color: white;
+  margin-bottom: 0px !important;
+}
+
+/*
+GovernorCards
+*/
+.container {
+  transform-style: preserve-3d;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container .box .body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+.container .box .body .imgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.container .box .body .imgContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .body .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9933cc;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container .box:hover .body {
+  transform: rotateY(180deg);
+}
+
+.container .box .body .content div {
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(45deg, #9933cc, #202020);
+  transform: translateZ(100px);
+}
+
+.container .box .body .content div h3 {
+  letter-spacing: 1px;
+}
+
+.governor-name {
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 26px !important;
+  text-transform: uppercase !important;
+}
+
+.governor-details {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+}
