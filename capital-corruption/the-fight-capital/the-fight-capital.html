@@ -1,0 +1,169 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="the-fight-capital.css">
+</head>
+
+<body>
+
+    <script type="text/babel" data-presets="react,stage-3">
+
+        const TheFightAgainstCorruptionPage = () => {
+            const { useEffect, useState } = React
+
+            const useMountTransition = (isMounted, unmountDelay) => {
+                const [hasTransitionedIn, setHasTransitionedIn] = useState(false);
+
+                useEffect(() => {
+                    let timeoutId;
+
+                    if (isMounted && !hasTransitionedIn) {
+                        setHasTransitionedIn(true);
+                    } else if (!isMounted && hasTransitionedIn) {
+                        timeoutId = setTimeout(() => setHasTransitionedIn(false), unmountDelay);
+                    }
+                    return () => {
+                        clearTimeout(timeoutId);
+                    };
+                }, [unmountDelay, isMounted, hasTransitionedIn]);
+
+                return hasTransitionedIn;
+            };
+
+            const [currentSelection, setCurrentSelection] = useState("")
+
+            const ICON_LINKS = Object.freeze({
+                HOFSTADER_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-hofstadter-active.png",
+                HOFSTADER_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-hofstadter.png",
+                MORELAND_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/moreland-active.png",
+                MORELAND_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/moreland.png",
+                JCOPE_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/jcope-active.png",
+                JCOPE_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/jcope.png",
+                CELIG_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/celig-active.png",
+                CELIG_INACIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/celig.png"
+            });
+
+
+            let COMMITTEE_TITLE = ""
+            let COMMITTEE_CONTENT = '';
+            switch (currentSelection) {
+                case "hofstadter":
+                    COMMITTEE_TITLE = "The Hofstadter Commission"
+                    COMMITTEE_CONTENT = "Also known as the Seabury investigations, a joint committee formed by the NYS Legislature on behalf of Governor Franklin D. Roosevelt to probe corruption in New York City. It led to the downfall of NYC Mayor Jimmy Walker, one of the last of the Tammany Hall politicians."
+                    break;
+                case "moreland":
+                    COMMITTEE_TITLE = "The Moreland Commission"
+                    COMMITTEE_CONTENT = "The Commission to Investigate Public Corruption was created by New York governor Andrew Cuomo in July 2013 with the aim of investigating politicians and political organizations in New York for violations of state laws regulating elections, campaigns and political fundraising.  Cuomo disbanded the commission in March 2014.  There are suggestions that the commission was disbanded with work left to be done because its investigations were getting too close to the executive branch.  "
+                    break;
+                case "jcope":
+                    COMMITTEE_TITLE = "JCOPE (Joint Commission on Public Ethics)"
+                    COMMITTEE_CONTENT = "The Joint Commission on Public Ethics (JCOPE) was created in New York in 2011. It was established with the passage of the Public Integrity Reform Act of 2011, which was signed into law by then-Governor Andrew Cuomo.  JCOPE was formed to consolidate and oversee ethics enforcement in the state and was tasked with promoting transparency, integrity, and accountability in government, as well as enforcing ethics laws and regulations.  It came under criticism because it was controlled by the governor and because of the political way in which its members were selected.  "
+                    break;
+                case "celig":
+                    COMMITTEE_TITLE = "CELIG (Commission on Ethics and Lobbying in Government)"
+                    COMMITTEE_CONTENT = "The Commission on Ethics and Lobbying in Government was created in 2022 to replace JCOPE.  According to its website, its mission is to oversee, regulate and ensure compliance with New York State’s ethics and lobbying laws. It has broad authority over Statewide elected officials, candidates for those offices, executive branch officers and employees, members of the Legislature and legislative branch employees and candidates, as well as certain political party chairs, and registered lobbyists and their clients. The Commission provides information, education, and advice regarding current ethics and lobbying laws and promotes compliance through training, guidance, disclosure, audits, investigations and enforcement proceedings. "
+                    break;
+            }
+
+            function hofstadterActive(e) {
+                e.target.src = ICON_LINKS.HOFSTADER_ACTIVE
+            }
+
+            function hofstadterInactive(e) {
+                e.target.src = ICON_LINKS.HOFSTADER_INACTIVE
+            }
+
+            function morelandActive(e) {
+                e.target.src = ICON_LINKS.MORELAND_ACTIVE
+            }
+
+            function morelandInactive(e) {
+                e.target.src = ICON_LINKS.MORELAND_INACTIVE
+            }
+
+            function jcopeActive(e) {
+                e.target.src = ICON_LINKS.JCOPE_ACTIVE
+            }
+
+            function jcopeInactive(e) {
+                e.target.src = ICON_LINKS.JCOPE_INACTIVE
+            }
+
+            function celigActive(e) {
+                e.target.src = ICON_LINKS.CELIG_ACTIVE
+            }
+
+            function celigInactive(e) {
+                e.target.src = ICON_LINKS.CELIG_INACIVE
+            }
+
+
+            const handleClick = (value) => {
+                setCurrentSelection(value)
+            }
+
+            return (
+                <>
+                    <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
+                        <ol className="breadcrumb" style={{ backgroundColor: "#202020" }}>
+                            <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/"
+                                className="inactive-link">The Albany Room Home</a></li>
+                            <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/capital-corruption/"
+                                className="inactive-link">Capital Corruption Home</a></li>
+                            <li className="breadcrumb-item active current-page" aria-current="page">The Fight Against Corruption</li>
+                        </ol>
+                    </nav>
+
+                    <div className="header-section">
+                        <p className="introduction-text">The fight against political corruption has a history as long as corruption itself.
+                            As early as 1787 in New York State,
+                            any individual who would “directly or indirectly, attempt to influence any free elector of the state” would
+                            have to pay
+                            500 pounds and be ‘utterly disabled, disqualified, and incapacitated to hold, exercise, or enjoy any office,
+                            or place of
+                            trust or profit, whatsoever within this state.’”</p>
+                        <p className="directions"><b>Learn about state-level anti-corruption efforts in Albany by selecting an organization
+                            below.</b></p>
+                    </div>
+
+                    <div className="toggle-view-div d-flex align-items-center justify-content-center">
+                        <div className="card-group icon-card-group">
+                            <div className="card icon-card" onClick={() => handleClick("hofstadter")}>
+                                <img className="card-img-top" src={(currentSelection == "hofstadter") ? ICON_LINKS.HOFSTADER_ACTIVE : ICON_LINKS.HOFSTADER_INACTIVE} alt="The Hofstadter Commission" onMouseEnter={hofstadterActive} onMouseLeave={(currentSelection == "hofstadter") ? hofstadterActive : hofstadterInactive} />
+                            </div>
+
+                            <div className="card icon-card" onClick={() => handleClick("moreland")}>
+                                <img className="card-img-top" src={(currentSelection == "moreland") ? ICON_LINKS.MORELAND_ACTIVE : ICON_LINKS.MORELAND_INACTIVE} alt="The Moreland Commission" onMouseEnter={morelandActive} onMouseLeave={(currentSelection == "moreland") ? morelandActive : morelandInactive} />
+                            </div>
+
+                            <div className="card icon-card" onClick={() => handleClick("jcope")}>
+                                <img className="card-img-top" src={(currentSelection == "jcope") ? ICON_LINKS.JCOPE_ACTIVE : ICON_LINKS.JCOPE_INACTIVE} alt="JCOPE" onMouseEnter={jcopeActive} onMouseLeave={(currentSelection == "jcope") ? jcopeActive : jcopeInactive} />
+                            </div>
+                            <div className="card icon-card" onClick={() => handleClick("celig")}>
+                                <img className="card-img-top" src={(currentSelection == "celig") ? ICON_LINKS.CELIG_ACTIVE : ICON_LINKS.CELIG_INACIVE} alt="CELIG" onMouseEnter={celigActive} onMouseLeave={(currentSelection == "celig") ? celigActive : celigInactive} />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="header-section committee">
+                        <p className="committee-title">{COMMITTEE_TITLE}</p>
+                        <p>{COMMITTEE_CONTENT}</p>
+                    </div>
+                </>)
+        }
+
+        ReactDOM.render(<TheFightAgainstCorruptionPage />, document.getElementById("root"));
+    </script>
+
+    <div id="root"></div>
+</body>
