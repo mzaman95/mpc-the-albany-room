@@ -38,6 +38,7 @@ Icons
 .icon-card-group {
   max-width: 60%;
   flex-direction: row !important;
+  cursor: pointer;
 }
 
 .card-img-top {
