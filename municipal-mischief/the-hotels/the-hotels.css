@@ -1,0 +1,76 @@
+/*
+Breadcrumbs
+*/
+.breadcrumb-item {
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+}
+
+.inactive-link {
+  color: #fff;
+}
+
+.inactive-link:hover {
+  color: #f9ddff;
+}
+
+/*
+Header Section
+*/
+.header-section {
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: white;
+}
+
+.teaser-text {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 30px !important;
+  color: white;
+  margin-bottom: 0px !important;
+}
+
+/*
+Icons
+*/
+.icon-card-group {
+  max-width: 90%;
+  flex-direction: row !important;
+  cursor: pointer;
+}
+
+.card-img-top {
+  background-color: #202020 !important;
+}
+
+.icon-card {
+  border: none !important;
+  background-color: #202020 !important;
+}
+
+/*
+Content
+*/
+.committee {
+  @media (min-width: "500px") {
+    height: "300px";
+  }
+}
+
+.committee-title {
+  color: white !important;
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 30px;
+}
+
+.teaser-text {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 30px !important;
+  color: white;
+  margin-bottom: 0px !important;
+}
