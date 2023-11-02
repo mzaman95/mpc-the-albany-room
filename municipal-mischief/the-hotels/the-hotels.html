@@ -251,20 +251,25 @@
                         </div>
                     </div>
 
-                    <div className="header-section committee">
-                        <p className="committee-title">{HOTEL_NAME}</p>
+                    <div className="header-section hotel">
+                        <p className="hotel-title">{HOTEL_NAME}</p>
                         <p>{HOTEL_LOCATION}</p>
                         <p>{HOTEL_KNOWN_FOR}</p>
                         <img src={HOTEL_IMAGE} className="img-fluid w-50" alt={HOTEL_NAME} />
-                        <div>
+                    </div>
+                    <div className="header-section hotel">
+                        {currentSelection && <p className="hotel-title">VIP Guests</p>}
+                        <div className="card-deck">
                             {
                                 HOTEL_VIP_GUESTS.map((guest) => {
                                     return (
-                                        <>
-                                            <p>{guest.name}</p>
-                                            <img src={guest.image} className="img-fluid w-50" alt={guest.name} />
-                                            <p>{guest.description}</p>
-                                        </>
+                                        <div className="card guest-card">
+                                            <img className="card-img-top guest-image" src={guest.image} alt={guest.name} />
+                                            <div className="card-body guest-details">
+                                                <h5 className="card-title guest-name">{guest.name}</h5>
+                                                <p className="card-text guest-description">{guest.description}</p>
+                                            </div>
+                                        </div>
                                     )
 
                                 })

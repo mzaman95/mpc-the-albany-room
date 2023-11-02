@@ -48,6 +48,35 @@ Icons
   background-color: #202020 !important;
 }
 
+.guest-card {
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.guest-details {
+  background: linear-gradient(45deg, #9933cc, #202020) !important;
+}
+
+.guest-image {
+  width: 100%;
+  height: 40vw !important;
+  object-fit: cover;
+}
+
+.guest-name {
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 26px !important;
+  text-transform: uppercase !important;
+  color: white !important;
+}
+
+.guest-description {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
 .icon-card {
   border: none !important;
   background-color: #202020 !important;
@@ -56,16 +85,17 @@ Icons
 /*
 Content
 */
-.committee {
+.hotel {
   @media (min-width: "500px") {
     height: "300px";
   }
 }
 
-.committee-title {
+.hotel-title {
   color: white !important;
   font-family: "Gotham Bold", sans-serif;
   font-size: 30px;
+  margin-bottom: 10px !important;
 }
 
 .teaser-text {
