@@ -40,9 +40,9 @@
 
                 <div class="col-sm-6">
                     <a href={link} className="category-link">
-                        <div class="card h-100" style={{ borderRadius: "0px" }}>
+                        <div class="card h-100" style={{ borderRadius: "16px" }}>
                             <div class="card-body text-center">
-                                <h5 class="card-title">{name}</h5>
+                                <p class="card-title" style={{marginBottom:"10px"}}>{name}</p>
                                 <p class="card-text">{description}</p>
                             </div>
                         </div>
@@ -52,17 +52,6 @@
         }
 
         const TheAlbanyRoomHomePage = () => {
-            //const [categories, setCategories] = useState([]);
-
-            /*
-            useEffect(() => {
-                fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/categories.json")
-                    .then(response => response.json())
-                    .then(data => {
-                        setCategories(data)
-                    })
-            }, [])
-*/
 
             const categoriesList = corruptionCategories.map((corruptionCategory, index) => {
                 const { name, link, description } = corruptionCategory
