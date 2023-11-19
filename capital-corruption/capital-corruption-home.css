@@ -94,13 +94,13 @@
 }
 
 .card {
-  color: #fefdfe !important;
-  background-color: #202020 !important;
+  color: #202020 !important;
+  background-color: white !important;
   border-radius: 16px !important;
 }
 
 .card:hover {
-  color: #fefdfe !important;
+  color: white !important;
   background-color: #9933cc !important;
 }
 
