@@ -1,15 +1,43 @@
+/* Breadcrumbs */
+.albany-room-breadcrumbs {
+  margin-left: 35px !important;
+}
+
 .breadcrumb-item {
   font-family: "Covered By Your Grace", sans-serif;
   text-transform: uppercase;
 }
 
 .inactive-link {
-  color: #fff;
+  color: #9933cc;
 }
 
 .inactive-link:hover {
-  color: #f9ddff;
+  color: #b758e7;
   text-decoration: underline;
+}
+
+/* Toggle and Views Section */
+.toggle-and-views {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  margin-left: 75px !important;
+  margin-bottom: 80px !important;
+}
+
+/* Page Title */
+.page-title {
+  margin-left: 75px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 68px !important;
+  text-transform: uppercase !important;
+  color: #202020;
+  margin-bottom: 20px !important;
 }
 
 .toggle-btn {
@@ -29,8 +57,14 @@
 }
 
 .inactive-btn {
-  color: #d6d6d6;
-  background-color: white;
+  color: #b5b5b5;
+  background-color: #fefdfe;
+}
+
+/* Toggle */
+.toggle-view-div {
+  margin-left: 75px !important;
+  margin-bottom: 40px !important;
 }
 
 /* Gallery View */
@@ -39,7 +73,8 @@
   font-family: "Gotham Book", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: white;
+  color: #202020;
+  margin-bottom: 20px !important;
 }
 
 .card-title {
@@ -59,13 +94,14 @@
 }
 
 .card {
-  color: #202020;
-  background-color: white;
+  color: #fefdfe !important;
+  background-color: #202020 !important;
+  border-radius: 16px !important;
 }
 
 .card:hover {
-  color: white !important;
-  background-color: #9933cc;
+  color: #fefdfe !important;
+  background-color: #9933cc !important;
 }
 
 /* Map View */
@@ -76,6 +112,7 @@
 
 .downtown-albany-map {
   filter: grayscale(100%) !important;
+  border-radius: 16px !important;
 }
 
 .hotspots {
@@ -135,6 +172,7 @@
 
 .modal {
   font-family: "Gotham";
+  border-radius: 16px !important;
 }
 
 .modal-header {
@@ -146,6 +184,10 @@
   font-family: "Covered By Your Grace", sans-serif;
   text-transform: uppercase;
   margin-bottom: 0px !important;
+}
+
+.modal-image {
+  border-radius: 16px !important;
 }
 
 .image-credit {
