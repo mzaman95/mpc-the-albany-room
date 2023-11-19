@@ -63,7 +63,7 @@
 
             return (
                 <>
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
+                    <div className="d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
                         <p className="directions"><b>Learn more about the local  corruption in Albany by selecting a category below.</b></p>
                     </div>
                     <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
@@ -71,6 +71,7 @@
                     </div>
                 </>
             )
+            
         }
 
         const MapView = () => {
@@ -91,22 +92,25 @@
 
             return (
                 <>
-                    <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
-                        <ol class="breadcrumb" style={{ backgroundColor: "#202020" }}>
+                    <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
+                        <ol class="breadcrumb" style={{ backgroundColor: "#fefdfe" }}>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/" className="inactive-link albany-room-home-link"><li>The Albany Room Home</li></a></li>
                             <li className="breadcrumb-item active current-page" aria-current="page">Municipal Mischief Home</li>
                         </ol>
                     </nav>
 
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center">
+                    <p className="page-title">Municipal Mischief</p>
+
+                    <div className="toggle-view-div d-flex">
                         <div className={galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(true)}>Gallery View</div>
                         <div className={!galleryView ? activeToggle : inactiveToggle} onClick={() => handleToggle(false)}>Map View</div>
                     </div>
 
-                    {
-                        galleryView ? <GalleryView /> : <h1>Map View</h1>
-                    }
-
+                    <div className="toggle-and-views">
+                        {
+                            galleryView ? <GalleryView /> : <h1>Map View</h1>
+                        }
+                    </div>
                 </>);
         };
 
