@@ -108,3 +108,118 @@
   color: white !important;
   background-color: #9933cc;
 }
+
+/* Map View */
+.municipal-mischief-map-view {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.downtown-albany-map {
+  filter: grayscale(100%) !important;
+  border-radius: 16px !important;
+}
+
+.hotspots {
+  position: relative;
+}
+.hotspots img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes expand-hotspot {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  color: #9933cc;
+  font-size: 18px;
+}
+
+.hotspot-inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9933cc;
+  padding: 10px;
+}
+
+.hotspot-outer-circle {
+  animation: expand-hotspot 2s infinite;
+  width: 20px;
+  height: 20px;
+  background-color: #9933cc;
+  padding: 4px;
+}
+
+.hotspot-inner-circle,
+.hotspot-outer-circle {
+  content: "";
+  display: inline-block;
+  box-sizing: content-box;
+  border-radius: 50%;
+}
+
+.modal {
+  font-family: "Gotham";
+  border-radius: 16px !important;
+}
+
+.modal-header {
+  background-color: #9933cc;
+}
+
+.modal-title {
+  color: white !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px !important;
+}
+
+.modal-image {
+  border-radius: 16px !important;
+}
+
+.image-credit {
+  font-family: "Gotham Book", sans-serif;
+  color: #b5b5b5;
+  font-size: 12px;
+}
+
+.location-to-page-link {
+  font-family: "Covered By Your Grace", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #9933cc;
+  text-decoration: none;
+}
+
+.location-to-page-link:hover {
+  color: #b758e7;
+  text-decoration: underline;
+}
+
+.location-details {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  color: #202020;
+}
+
+button:hover {
+  background-color: transparent;
+}

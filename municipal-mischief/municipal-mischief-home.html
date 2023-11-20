@@ -1,13 +1,12 @@
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <!-- This is what supports JSX compilation (and other transformations) -->
     <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"></script>
+    <!-- These are for React -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
     <link rel="stylesheet" href="municipal-mischief-home.css">
@@ -15,6 +14,113 @@
 
 <body>
     <script type="text/babel" data-presets="react,stage-3">
+
+        const locations = [
+            {
+                "id": "H1",
+                "name": "Albany City Hall",
+                "placement": {
+                    "left": "39%",
+                    "top": "32%"
+                },
+                "address": "24 Eagle St.",
+                "description": "Albany’s City Hall was the epicenter to a century-long legacy of machine politics – among the most storied examples of bare knuckle machine politics found anywhere in the U.S.",
+                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/city-hall.jpeg",
+                "imageCredit": "UpstateNYer, CC BY-SA 3.0 , via Wikimedia Commons",
+                "linkSectionName": "Political Machines",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/political-machines/"
+            },
+            {
+                "id": "H2",
+                "name": "Kenmore Hotel",
+                "placement": {
+                    "left": "54%",
+                    "top": "35%"
+                },
+                "address": "74 North Pearl St.",
+                "description": "With its famous “Rain-Bo Room,” the Kenmore was a frequent hang out for the notorious gangster Jack “Legs” Diamond, where he would womanize, drink, and plot with conspirators.",
+                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg",
+                "imageCredit": "Photo by Chuck Miller",
+                "linkSectionName": "The Hotels",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
+            },
+            {
+                "id": "H3",
+                "name": "Dove Street Boarding House",
+                "placement": {},
+                "address": "67 Dove St.",
+                "description": "On December 18, 1931, gangster Legs Diamond was assassinated, most likely on orders from O’Connell for trying to muscle in on his own beer racket.",
+                "image": "",
+                "imageCredit": "",
+                "linkSectionName": "The Corning-O’Connell Machine",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-corning-oconnell-machine/"
+            },
+            {
+                "id": "H4",
+                "name": "Hedrick Brewing Company",
+                "placement": {},
+                "address": "396-422 Central Ave.",
+                "description": "During prohibition, Hedrick was a bootlegging operation. It came to be owned by District Attorney John J. Conway, who ran it as a front for the financial benefit of political machine boss Daniel P. O’Connell.",
+                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/beer.jpg",
+                "imageCredit": "Photo by Josh Olalde on Unsplash",
+                "linkSectionName": "The Corning-O’Connell Machine",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-corning-oconnell-machine/"
+            },
+            {
+                "id": "H5",
+                "name": "Dan O’Connell’s Residence",
+                "placement": {},
+                "address": "142 Whitehall Road",
+                "description": "Dan O’Connell was the political muscle behind Erastus Corning II’s administration that kept the Corning-O’Connell machine churning. Besides doling out patronage positions, O’Connell found a lucrative side business in running gambling operations.",
+                "image": "",
+                "imageCredit": "",
+                "linkSectionName": "The Corning-O’Connell Machine",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-corning-oconnell-machine/"
+            },
+            {
+                "id": "H6",
+                "name": "The Albany Evening Journal",
+                "placement": {
+                    "right": "30%",
+                    "bottom": "4%"
+                },
+                "address": "Corner of Division Street and Broadway",
+                "description": "Run by William \"Billy\" Barnes, the Albany Evening Journal was the Republican newspaper in Albany.",
+                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-albany-evening-journal.jpeg",
+                "imageCredit": "Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons",
+                "linkSectionName": "The Newspapers",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
+            },
+            {
+                "id": "H7",
+                "name": "Albany Argus Newspaper",
+                "placement": {
+                    "right": "37%",
+                    "bottom": "7%"
+                },
+                "address": "Corner of Broadway and Beaver Street",
+                "description": "The Albany Argus newspaper was the voice of local Democrats.",
+                "image": "",
+                "imageCredit": "",
+                "linkSectionName": "The Newspapers",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
+            },
+            {
+                "id": "H8",
+                "name": "Albany Times Union",
+                "placement": {
+                    "left": "48%",
+                    "top": "8%"
+                },
+                "address": "16 Sheridan Ave.",
+                "description": "Now politically independent, the Times Union had been squarely in the Democratic machine’s pockets.",
+                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/albany-times-union.jpg",
+                "imageCredit": "Photo by Chuck Miller",
+                "linkSectionName": "The Newspapers",
+                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
+            }
+        ]
+
 
         const Category = (props) => {
             const { name, description, link } = props
@@ -71,11 +177,75 @@
                     </div>
                 </>
             )
-            
+
+        }
+
+        const LocationHotSpot = (props) => {
+            const { location } = props
+            const { id, placement, name, description, address, image, imageCredit, linkSectionName, linkSectionURL } = location
+            const dataBsTarget = "#" + id
+
+            return (
+                <>
+                    <a className="hotspot" data-bs-target={dataBsTarget} data-bs-toggle="modal" style={placement}>
+                        <div className="hotspot-outer-circle"></div>
+                        <div className="hotspot-inner-circle"></div>
+                    </a>
+                    <div className="modal" tabIndex="-1" id={id}>
+                        <div className="modal-dialog">
+                            <div className="modal-content text-center" style={{ borderRadius: "16px", border: "none" }}>
+                                <div className="modal-header" style={{ borderTopLeftRadius: "16px", borderTopRightRadius: "16px" }}>
+                                    <h3 className="modal-title">{name}</h3>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div className="modal-body">
+                                    <img src={image} alt={name} className="modal-image img-fluid" />
+                                    <span className="image-credit" >{imageCredit}</span>
+                                    <br />
+                                    <br />
+                                    <p className="location-details">{address}</p>
+                                    <p className="location-details"><b>{description}</b></p>
+                                    <p className="location-details">Learn more about it in <a className="location-to-page-link" href={linkSectionURL}>{linkSectionName}</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </>
+            )
         }
 
         const MapView = () => {
-            return <h1>Map View</h1>
+            /*
+const { useEffect, useState } = React
+const [locations, setLocations] = useState([]);
+
+useEffect(() => {
+fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/capital-corruption-locations.json")
+.then(response => response.json())
+.then(data => {
+setLocations(data)
+})
+}, [])
+*/
+
+            const locationHotspots = locations.map((location, index) => {
+                return <LocationHotSpot location={location} key={index} />
+            })
+
+            return (
+                <>
+                    <div className="municipal-mischief-map-view">
+                        <div className="d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
+                            <p className="directions"><b>Click on the hotspots to learn about each of the locations.</b></p>
+                        </div>
+                        <div className="hotspots">
+                            <img className="downtown-albany-map" src="https://museumofpoliticalcorruption.org/wp-content/uploads/2023/09/downtownAlbanyMap.png" alt="Map of Downtown Albany" />
+                            {locationHotspots}
+                        </div>
+                    </div>
+                </>
+            )
         }
 
         const TheMunicipalMischiefHomePage = () => {
@@ -108,7 +278,7 @@
 
                     <div className="toggle-and-views">
                         {
-                            galleryView ? <GalleryView /> : <h1>Map View</h1>
+                            galleryView ? <GalleryView /> : <MapView />
                         }
                     </div>
                 </>);
