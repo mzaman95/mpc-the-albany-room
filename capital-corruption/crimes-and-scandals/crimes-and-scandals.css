@@ -1,43 +1,58 @@
+/* Breadcrumbs */
+.albany-room-breadcrumbs {
+  margin-left: 35px !important;
+}
+
+.breadcrumb {
+  padding: 0px !important;
+}
+
 .breadcrumb-item {
   font-family: "Covered By Your Grace", sans-serif;
   text-transform: uppercase;
 }
 
 .inactive-link {
-  color: #fff;
+  color: #9933cc;
 }
 
 .inactive-link:hover {
-  color: #f9ddff;
+  color: #b758e7;
+  text-decoration: underline;
 }
 
-.toggle-btn {
-  border-radius: 0px !important;
-  border: solid #9933cc 2px;
-  font-family: "Gotham Medium", sans-serif;
-  cursor: pointer;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+/* Page Title */
+.page-title {
+  margin-left: 75px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 68px !important;
+  text-transform: uppercase !important;
+  color: #202020;
+  margin-bottom: 20px !important;
 }
 
-.active-btn {
-  color: white;
-  background-color: #9933cc;
-}
-
-.inactive-btn {
-  color: #ceccdb;
-  background-color: white;
+/* Toggle and Views Section */
+.toggle-and-views {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  margin-left: 75px !important;
+  margin-bottom: 80px !important;
 }
 
 .directions {
   font-family: "Gotham Book", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: white;
+  color: #202020;
+  margin-bottom: 20px !important;
 }
+
+/*Card */
 
 .card-title {
   font-family: "Covered By Your Grace", sans-serif;
@@ -58,6 +73,7 @@
 .card {
   color: #202020;
   background-color: white;
+  border-radius: 16px !important;
 }
 
 .card:hover {

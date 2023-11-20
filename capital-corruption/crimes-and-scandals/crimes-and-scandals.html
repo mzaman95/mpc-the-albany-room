@@ -57,28 +57,34 @@
             })
 
             return (
-                <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
-                    {categoriesList}
-                </div>
+                <>
+                    <div className="d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
+                        <p className="directions"><b>Learn more about the crimes and scandals that took place in Albany by selecting a category below.</b></p>
+                    </div>
+                    <div className="row" style={{ maxWidth: "100%", margin: "auto", marginBottom: "40px" }}>
+                        {categoriesList}
+                    </div>
+                </>
             )
         }
 
         const CrimesAndScandalsHomePage = () => {
             return (
                 <>
-                    <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
-                        <ol className="breadcrumb" style={{ backgroundColor: "#202020" }}>
+                    <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
+                        <ol className="breadcrumb" style={{ backgroundColor: "#fefdfe" }}>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/" className="inactive-link">The Albany Room Home</a></li>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/capital-corruption/" className="inactive-link">Capital Corruption Home</a></li>
                             <li className="breadcrumb-item active current-page" aria-current="page">Crimes & Scandals</li>
                         </ol>
                     </nav>
 
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center" style={{ marginTop: "40px" }}>
-                        <p className="directions"><b>Learn more about the crimes and scandals that took place in Albany by selecting a category below.</b></p>
+                    <p className="page-title">Crimes & Scandals</p>
+
+                    <div className="toggle-and-views">
+                        <GalleryView />
                     </div>
 
-                    <GalleryView />
                 </>);
         };
 
