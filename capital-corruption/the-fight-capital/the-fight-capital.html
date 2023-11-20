@@ -113,8 +113,8 @@
 
             return (
                 <>
-                    <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
-                        <ol className="breadcrumb" style={{ backgroundColor: "#202020" }}>
+                    <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
+                        <ol className="breadcrumb" style={{ backgroundColor: "#fefdfe" }}>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/"
                                 className="inactive-link">The Albany Room Home</a></li>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/capital-corruption/"
@@ -123,42 +123,46 @@
                         </ol>
                     </nav>
 
-                    <div className="header-section">
-                        <p className="introduction-text">The fight against political corruption has a history as long as corruption itself.
-                            As early as 1787 in New York State,
-                            any individual who would “directly or indirectly, attempt to influence any free elector of the state” would
-                            have to pay
-                            500 pounds and be ‘utterly disabled, disqualified, and incapacitated to hold, exercise, or enjoy any office,
-                            or place of
-                            trust or profit, whatsoever within this state.’”</p>
-                        <p className="directions"><b>Learn about state-level anti-corruption efforts in Albany by selecting an organization
-                            below.</b></p>
-                    </div>
+                    <p className="page-title">The Fight Against Corruption</p>
 
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center">
-                        <div className="card-group icon-card-group">
-                            <div className="card icon-card" onClick={() => handleClick("hofstadter")}>
-                                <img className="card-img-top" src={(currentSelection == "hofstadter") ? ICON_LINKS.HOFSTADER_ACTIVE : ICON_LINKS.HOFSTADER_INACTIVE} alt="The Hofstadter Commission" onMouseEnter={hofstadterActive} onMouseLeave={(currentSelection == "hofstadter") ? hofstadterActive : hofstadterInactive} />
-                            </div>
+                    <p className="introduction-text">The fight against political corruption has a history as long as corruption itself.
+                        As early as 1787 in New York State,
+                        any individual who would “directly or indirectly, attempt to influence any free elector of the state” would
+                        have to pay
+                        500 pounds and be ‘utterly disabled, disqualified, and incapacitated to hold, exercise, or enjoy any office,
+                        or place of
+                        trust or profit, whatsoever within this state.’</p>
 
-                            <div className="card icon-card" onClick={() => handleClick("moreland")}>
-                                <img className="card-img-top" src={(currentSelection == "moreland") ? ICON_LINKS.MORELAND_ACTIVE : ICON_LINKS.MORELAND_INACTIVE} alt="The Moreland Commission" onMouseEnter={morelandActive} onMouseLeave={(currentSelection == "moreland") ? morelandActive : morelandInactive} />
-                            </div>
+                    <div className="toggle-and-views">
+                        <div className="header-section">
+                            <p className="directions"><b>Learn about state-level anti-corruption efforts in Albany by selecting an organization
+                                below.</b></p>
+                        </div>
+                        <div className="toggle-view-div d-flex align-items-center justify-content-center">
+                            <div className="card-group icon-card-group">
+                                <div className="card icon-card" onClick={() => handleClick("hofstadter")}>
+                                    <img className="card-img-top" src={(currentSelection == "hofstadter") ? ICON_LINKS.HOFSTADER_ACTIVE : ICON_LINKS.HOFSTADER_INACTIVE} alt="The Hofstadter Commission" onMouseEnter={hofstadterActive} onMouseLeave={(currentSelection == "hofstadter") ? hofstadterActive : hofstadterInactive} />
+                                </div>
 
-                            <div className="card icon-card" onClick={() => handleClick("jcope")}>
-                                <img className="card-img-top" src={(currentSelection == "jcope") ? ICON_LINKS.JCOPE_ACTIVE : ICON_LINKS.JCOPE_INACTIVE} alt="JCOPE" onMouseEnter={jcopeActive} onMouseLeave={(currentSelection == "jcope") ? jcopeActive : jcopeInactive} />
-                            </div>
-                            <div className="card icon-card" onClick={() => handleClick("celig")}>
-                                <img className="card-img-top" src={(currentSelection == "celig") ? ICON_LINKS.CELIG_ACTIVE : ICON_LINKS.CELIG_INACIVE} alt="CELIG" onMouseEnter={celigActive} onMouseLeave={(currentSelection == "celig") ? celigActive : celigInactive} />
+                                <div className="card icon-card" onClick={() => handleClick("moreland")}>
+                                    <img className="card-img-top" src={(currentSelection == "moreland") ? ICON_LINKS.MORELAND_ACTIVE : ICON_LINKS.MORELAND_INACTIVE} alt="The Moreland Commission" onMouseEnter={morelandActive} onMouseLeave={(currentSelection == "moreland") ? morelandActive : morelandInactive} />
+                                </div>
+
+                                <div className="card icon-card" onClick={() => handleClick("jcope")}>
+                                    <img className="card-img-top" src={(currentSelection == "jcope") ? ICON_LINKS.JCOPE_ACTIVE : ICON_LINKS.JCOPE_INACTIVE} alt="JCOPE" onMouseEnter={jcopeActive} onMouseLeave={(currentSelection == "jcope") ? jcopeActive : jcopeInactive} />
+                                </div>
+                                <div className="card icon-card" onClick={() => handleClick("celig")}>
+                                    <img className="card-img-top" src={(currentSelection == "celig") ? ICON_LINKS.CELIG_ACTIVE : ICON_LINKS.CELIG_INACIVE} alt="CELIG" onMouseEnter={celigActive} onMouseLeave={(currentSelection == "celig") ? celigActive : celigInactive} />
+                                </div>
                             </div>
                         </div>
-
+                        {currentSelection && <div className="committee-card d-flex align-items-center justify-content-center">
+                            <p className="committee-title">{COMMITTEE_TITLE}</p>
+                            <p className="committee-details">{COMMITTEE_CONTENT}</p>
+                        </div>}
                     </div>
 
-                    <div className="header-section committee">
-                        <p className="committee-title">{COMMITTEE_TITLE}</p>
-                        <p>{COMMITTEE_CONTENT}</p>
-                    </div>
+
                 </>)
         }
 
