@@ -1,20 +1,48 @@
 [
   {
     "id": "H1",
+    "name": "Albany City Hall",
+    "placement": {
+      "left": "39%",
+      "top": "32%"
+    },
+    "address": "24 Eagle St.",
+    "description": "Albany’s City Hall was the epicenter to a century-long legacy of machine politics – among the most storied examples of bare knuckle machine politics found anywhere in the U.S.",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/city-hall.jpeg",
+    "imageCredit": "UpstateNYer, CC BY-SA 3.0 , via Wikimedia Commons",
+    "linkSectionName": "Political Machines",
+    "linkSectionURL": "https://museumofpoliticalcorruption.org/political-machines/"
+  },
+  {
+    "id": "H2",
+    "name": "Kenmore Hotel",
+    "placement": {
+      "left": "54%",
+      "top": "35%"
+    },
+    "address": "74 North Pearl St.",
+    "description": "With its famous “Rain-Bo Room,” the Kenmore was a frequent hang out for the notorious gangster Jack “Legs” Diamond, where he would womanize, drink, and plot with conspirators.",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg",
+    "imageCredit": "Photo by Chuck Miller",
+    "linkSectionName": "The Hotels",
+    "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
+  },
+  {
+    "id": "H3",
     "name": "The Albany Evening Journal",
     "placement": {
       "right": "30%",
       "bottom": "4%"
     },
     "address": "Corner of Division Street and Broadway",
-    "description": "Run by William \"Billy\" Barnes, the Albany Evening Journal  was the Republican newspaper in Albany.",
-    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-albany-evening-journal.jpeg ",
+    "description": "Run by William \"Billy\" Barnes, the Albany Evening Journal was the Republican newspaper in Albany.",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-albany-evening-journal.jpeg",
     "imageCredit": "Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons",
     "linkSectionName": "The Newspapers",
-    "linkSectionURL": ""
+    "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
   },
   {
-    "id": "H2",
+    "id": "H4",
     "name": "Albany Argus Newspaper",
     "placement": {
       "right": "37%",
@@ -22,84 +50,23 @@
     },
     "address": "Corner of Broadway and Beaver Street",
     "description": "The Albany Argus newspaper was the voice of local Democrats.",
-    "image": "",
-    "imageCredit": "",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/absolutvision-WYd_PkCa1BY-unsplash-scaled.jpg",
+    "imageCredit": "Photo by AbsolutVision on Unsplash",
     "linkSectionName": "The Newspapers",
-    "linkSectionURL": ""
+    "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
   },
   {
-    "id": "H3",
+    "id": "H5",
     "name": "Albany Times Union",
     "placement": {
       "left": "48%",
       "top": "8%"
     },
     "address": "16 Sheridan Ave.",
-    "description": "Now politically independent, the  Times Union had been squarely in the Democratic machine’s pockets.",
-    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/albany-times-union.jpg ",
+    "description": "Now politically independent, the Times Union had been squarely in the Democratic machine’s pockets.",
+    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/albany-times-union.jpg",
     "imageCredit": "Photo by Chuck Miller",
     "linkSectionName": "The Newspapers",
-    "linkSectionURL": ""
-  },
-  {
-    "id": "H4",
-    "name": "Kenmore Hotel",
-    "placement": {
-      "left": "54%",
-      "top": "35%"
-    },
-    "address": "74 North Pearl St.",
-    "description": "With its famous  “Rain-Bo Room,”  the Kenmore was a frequent hang out for the notorious gangster Jack “Legs” Diamond, where he would womanize, drink, and plot with conspirators.",
-    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg ",
-    "imageCredit": "Photo by Chuck Miller",
-    "linkSectionName": "The Hotels",
-    "linkSectionURL": ""
-  },
-  {
-    "id": "H5",
-    "name": "Albany City Hall",
-    "placement": {
-      "left": "39%",
-      "top": "32%"
-    },
-    "address": "24 Eagle St.",
-    "description": "Albany’s City Hall was the epicenter to a century-long legacy of machine politics  – among the most storied examples of bare knuckle machine politics found anywhere  in the U.S.",
-    "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/city-hall.jpeg ",
-    "imageCredit": "UpstateNYer, CC BY-SA 3.0 , via Wikimedia Commons",
-    "linkSectionName": "Political Machines",
-    "linkSectionURL": ""
-  },
-  {
-    "id": "H6",
-    "name": "Dove Street Boarding House",
-    "placement": {},
-    "address": "67 Dove Street",
-    "description": "On December 18, 1931, gangster Legs Diamond was assassinated, most likely on orders from O’Connell for trying to muscle in on his own beer racket.",
-    "image": "",
-    "imageCredit": "",
-    "linkSectionName": "The Corning/O’Connell Machine",
-    "linkSectionURL": ""
-  },
-  {
-    "id": "H7",
-    "name": "Hedrick Brewing Company",
-    "placement": {},
-    "address": "396-422 Central Avenue",
-    "description": "During prohibition, Hedrick was a bootlegging operation. It came to be owned by District Attorney John J. Conway, who ran it as a front for the financial benefit of political machine boss Daniel P. O’Connell.",
-    "image": "",
-    "imageCredit": "",
-    "linkSectionName": "The Corning/O’Connell Machine",
-    "linkSectionURL": ""
-  },
-  {
-    "id": "H8",
-    "name": "Dan O’Connell’s Residence",
-    "placement": {},
-    "address": "142 Whitehall Road",
-    "description": "Dan O’Connell was the political muscle behind Erastus Corning II’s administration that kept the Corning-O’Connell machine churning.  Besides doling out patronage positions, O’Connell found a lucrative side  business in running gambling operations.  ",
-    "image": "",
-    "imageCredit": "",
-    "linkSectionName": "The Corning/O’Connell Machine",
-    "linkSectionURL": ""
+    "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
   }
 ]
