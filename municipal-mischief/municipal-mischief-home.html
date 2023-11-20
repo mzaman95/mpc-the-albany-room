@@ -14,80 +14,80 @@
 
 <body>
     <script type="text/babel" data-presets="react,stage-3">
-
-        const locations = [
-            {
-                "id": "H1",
-                "name": "Albany City Hall",
-                "placement": {
-                    "left": "39%",
-                    "top": "32%"
-                },
-                "address": "24 Eagle St.",
-                "description": "Albany’s City Hall was the epicenter to a century-long legacy of machine politics – among the most storied examples of bare knuckle machine politics found anywhere in the U.S.",
-                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/city-hall.jpeg",
-                "imageCredit": "UpstateNYer, CC BY-SA 3.0 , via Wikimedia Commons",
-                "linkSectionName": "Political Machines",
-                "linkSectionURL": "https://museumofpoliticalcorruption.org/political-machines/"
-            },
-            {
-                "id": "H2",
-                "name": "Kenmore Hotel",
-                "placement": {
-                    "left": "54%",
-                    "top": "35%"
-                },
-                "address": "74 North Pearl St.",
-                "description": "With its famous “Rain-Bo Room,” the Kenmore was a frequent hang out for the notorious gangster Jack “Legs” Diamond, where he would womanize, drink, and plot with conspirators.",
-                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg",
-                "imageCredit": "Photo by Chuck Miller",
-                "linkSectionName": "The Hotels",
-                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
-            },
-            {
-                "id": "H3",
-                "name": "The Albany Evening Journal",
-                "placement": {
-                    "right": "30%",
-                    "bottom": "4%"
-                },
-                "address": "Corner of Division Street and Broadway",
-                "description": "Run by William \"Billy\" Barnes, the Albany Evening Journal was the Republican newspaper in Albany.",
-                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-albany-evening-journal.jpeg",
-                "imageCredit": "Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons",
-                "linkSectionName": "The Newspapers",
-                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
-            },
-            {
-                "id": "H4",
-                "name": "Albany Argus Newspaper",
-                "placement": {
-                    "right": "37%",
-                    "bottom": "7%"
-                },
-                "address": "Corner of Broadway and Beaver Street",
-                "description": "The Albany Argus newspaper was the voice of local Democrats.",
-                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/absolutvision-WYd_PkCa1BY-unsplash-scaled.jpg",
-                "imageCredit": "Photo by AbsolutVision on Unsplash",
-                "linkSectionName": "The Newspapers",
-                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
-            },
-            {
-                "id": "H5",
-                "name": "Albany Times Union",
-                "placement": {
-                    "left": "48%",
-                    "top": "8%"
-                },
-                "address": "16 Sheridan Ave.",
-                "description": "Now politically independent, the Times Union had been squarely in the Democratic machine’s pockets.",
-                "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/albany-times-union.jpg",
-                "imageCredit": "Photo by Chuck Miller",
-                "linkSectionName": "The Newspapers",
-                "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
-            }
-        ]
-
+        /*
+                const locations = [
+                    {
+                        "id": "H1",
+                        "name": "Albany City Hall",
+                        "placement": {
+                            "left": "39%",
+                            "top": "32%"
+                        },
+                        "address": "24 Eagle St.",
+                        "description": "Albany’s City Hall was the epicenter to a century-long legacy of machine politics – among the most storied examples of bare knuckle machine politics found anywhere in the U.S.",
+                        "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/city-hall.jpeg",
+                        "imageCredit": "UpstateNYer, CC BY-SA 3.0 , via Wikimedia Commons",
+                        "linkSectionName": "Political Machines",
+                        "linkSectionURL": "https://museumofpoliticalcorruption.org/political-machines/"
+                    },
+                    {
+                        "id": "H2",
+                        "name": "Kenmore Hotel",
+                        "placement": {
+                            "left": "54%",
+                            "top": "35%"
+                        },
+                        "address": "74 North Pearl St.",
+                        "description": "With its famous “Rain-Bo Room,” the Kenmore was a frequent hang out for the notorious gangster Jack “Legs” Diamond, where he would womanize, drink, and plot with conspirators.",
+                        "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg",
+                        "imageCredit": "Photo by Chuck Miller",
+                        "linkSectionName": "The Hotels",
+                        "linkSectionURL": "https://museumofpoliticalcorruption.org/the-hotels/"
+                    },
+                    {
+                        "id": "H3",
+                        "name": "The Albany Evening Journal",
+                        "placement": {
+                            "right": "30%",
+                            "bottom": "4%"
+                        },
+                        "address": "Corner of Division Street and Broadway",
+                        "description": "Run by William \"Billy\" Barnes, the Albany Evening Journal was the Republican newspaper in Albany.",
+                        "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/the-albany-evening-journal.jpeg",
+                        "imageCredit": "Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons",
+                        "linkSectionName": "The Newspapers",
+                        "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
+                    },
+                    {
+                        "id": "H4",
+                        "name": "Albany Argus Newspaper",
+                        "placement": {
+                            "right": "37%",
+                            "bottom": "7%"
+                        },
+                        "address": "Corner of Broadway and Beaver Street",
+                        "description": "The Albany Argus newspaper was the voice of local Democrats.",
+                        "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/absolutvision-WYd_PkCa1BY-unsplash-scaled.jpg",
+                        "imageCredit": "Photo by AbsolutVision on Unsplash",
+                        "linkSectionName": "The Newspapers",
+                        "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
+                    },
+                    {
+                        "id": "H5",
+                        "name": "Albany Times Union",
+                        "placement": {
+                            "left": "48%",
+                            "top": "8%"
+                        },
+                        "address": "16 Sheridan Ave.",
+                        "description": "Now politically independent, the Times Union had been squarely in the Democratic machine’s pockets.",
+                        "image": "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/albany-times-union.jpg",
+                        "imageCredit": "Photo by Chuck Miller",
+                        "linkSectionName": "The Newspapers",
+                        "linkSectionURL": "https://museumofpoliticalcorruption.org/the-newspapers/"
+                    }
+                ]
+        */
 
         const Category = (props) => {
             const { name, description, link } = props
@@ -183,18 +183,18 @@
         }
 
         const MapView = () => {
-            /*
-const { useEffect, useState } = React
-const [locations, setLocations] = useState([]);
 
-useEffect(() => {
-fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/capital-corruption-locations.json")
-.then(response => response.json())
-.then(data => {
-setLocations(data)
-})
-}, [])
-*/
+            const { useEffect, useState } = React
+            const [locations, setLocations] = useState([]);
+
+            useEffect(() => {
+                fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2023/11/municipal-mischief-locations.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        setLocations(data)
+                    })
+            }, [])
+
 
             const locationHotspots = locations.map((location, index) => {
                 return <LocationHotSpot location={location} key={index} />
