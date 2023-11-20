@@ -1,17 +1,57 @@
 /*
 Breadcrumbs
 */
+.albany-room-breadcrumbs {
+  margin-left: 35px !important;
+}
+
+.breadcrumb {
+  padding: 0px !important;
+}
+
 .breadcrumb-item {
   font-family: "Covered By Your Grace", sans-serif;
   text-transform: uppercase;
 }
 
 .inactive-link {
-  color: #fff;
+  color: #9933cc;
 }
 
 .inactive-link:hover {
-  color: #f9ddff;
+  color: #b758e7;
+  text-decoration: underline;
+}
+
+/* Page Title */
+.page-title {
+  margin-left: 75px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 68px !important;
+  text-transform: uppercase !important;
+  color: #202020;
+  margin-bottom: 20px !important;
+}
+
+/* Intro Text */
+.introduction-text {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: #202020;
+  margin-left: 75px !important;
+}
+
+/* Toggle and Views Section */
+.toggle-and-views {
+  background-color: #202020;
+  border-radius: 16px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 20px !important;
+  padding-bottom: 60px !important;
+  margin-left: 75px !important;
+  margin-bottom: 80px !important;
 }
 
 /*
@@ -26,10 +66,10 @@ Header Section
 }
 
 .teaser-text {
-  font-family: "Gotham Bold", sans-serif;
-  font-size: 30px !important;
+  font-family: "Gotham Bold", "Gotham Medium" !important;
+  font-size: 26px !important;
   color: white;
-  margin-bottom: 0px !important;
+  margin-bottom: 20px !important;
 }
 
 /*
@@ -41,6 +81,7 @@ GovernorCards
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 16px !important;
 }
 
 .container .box {
@@ -51,6 +92,7 @@ GovernorCards
   transform-style: preserve-3d;
   perspective: 1000px;
   cursor: pointer;
+  border-radius: 16px !important;
 }
 
 .container .box .body {
@@ -61,6 +103,7 @@ GovernorCards
   height: 100%;
   transform-style: preserve-3d;
   transition: 0.9s ease;
+  border-radius: 16px !important;
 }
 
 .container .box .body .imgContainer {
@@ -70,6 +113,7 @@ GovernorCards
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  border-radius: 16px !important;
 }
 
 .container .box .body .imgContainer img {
@@ -79,6 +123,7 @@ GovernorCards
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px !important;
 }
 
 .container .box .body .content {
@@ -91,6 +136,7 @@ GovernorCards
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
+  border-radius: 16px !important;
 }
 
 .container .box:hover .body {
@@ -102,6 +148,7 @@ GovernorCards
   padding: 20px;
   background: linear-gradient(45deg, #9933cc, #202020);
   transform: translateZ(100px);
+  border-radius: 16px !important;
 }
 
 .container .box .body .content div h3 {
