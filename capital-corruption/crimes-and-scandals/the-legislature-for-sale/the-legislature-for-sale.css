@@ -81,7 +81,7 @@ Header Section
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #efe0f6;
+  background: #f0f0f0;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -98,10 +98,9 @@ Header Section
 /* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
-  font-family: "Covered By Your Grace", sans-serif;
-  text-transform: uppercase;
-  font-size: 26px;
-  font-weight: 600;
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
   color: var(--title-color);
   transition: color 0.3s ease-out;
 }
