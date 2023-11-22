@@ -128,11 +128,11 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #28666e;
+  color: #9933cc;
 }
 
 article a:focus {
-  outline: 1px dotted #28666e;
+  outline: 1px dotted #9933cc;
 }
 
 article a .icon {
@@ -148,11 +148,16 @@ article a .icon {
 /* using the has() relational pseudo selector to update our custom properties */
 .story-card:has(:hover, :focus) {
   --img-scale: 1.1;
-  --title-color: #28666e;
+  --title-color: #9933cc !important;
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.story-teaser {
+  font-family: "Gotham Book", sans-serif !important;
+  font-size: 16px !important;
 }
 
 /************************ 
@@ -172,6 +177,7 @@ Generic layout (demo looks)
   .story-card {
     container: card/inline-size;
   }
+
   .article-body p {
     display: none;
   }
@@ -186,6 +192,7 @@ Generic layout (demo looks)
   .article-body {
     padding-left: 0;
   }
+
   figure {
     width: 100%;
     height: 100%;
