@@ -143,6 +143,7 @@ article a .icon {
   transform: translateX(var(--link-icon-translate));
   opacity: var(--link-icon-opacity);
   transition: all 0.3s;
+  margin-bottom: 10px;
 }
 
 /* using the has() relational pseudo selector to update our custom properties */
@@ -213,4 +214,14 @@ Generic layout (demo looks)
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.read-more {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 16px;
+  color: #9933cc;
+}
+
+.read-more:hover {
+  color: #b758e7;
 }
