@@ -1,0 +1,64 @@
+/*
+Breadcrumbs
+*/
+.albany-room-breadcrumbs {
+  margin-left: 35px !important;
+}
+
+.breadcrumb {
+  padding: 0px !important;
+}
+
+.breadcrumb-item {
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+}
+
+.inactive-link {
+  color: #9933cc;
+}
+
+.inactive-link:hover {
+  color: #b758e7;
+  text-decoration: underline;
+}
+
+/* Page Title */
+.page-title {
+  margin-left: 75px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 68px !important;
+  text-transform: uppercase !important;
+  color: #202020;
+  margin-bottom: 20px !important;
+}
+
+/* Story */
+.story {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: #202020;
+  margin-left: 75px !important;
+  padding-bottom: 80px;
+}
+
+/* Img Div */
+.img-div {
+  background-color: #fefdfe;
+  border-radius: 16px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 20px !important;
+  padding-bottom: 60px !important;
+  margin-left: 75px !important;
+}
+
+.learn-more {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #202020;
+  margin-bottom: 20px !important;
+  margin-top: 80px;
+}
