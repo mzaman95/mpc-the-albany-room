@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
-    <link rel="stylesheet" href="the-fight-municipal.css">
+    <link rel="stylesheet" href="the-fight-capital.css">
 </head>
 
 <body>
@@ -18,7 +18,26 @@
     <script type="text/babel" data-presets="react,stage-3">
 
         const TheFightAgainstCorruptionPage = () => {
-            const { useState } = React
+            const { useEffect, useState } = React
+
+            const useMountTransition = (isMounted, unmountDelay) => {
+                const [hasTransitionedIn, setHasTransitionedIn] = useState(false);
+
+                useEffect(() => {
+                    let timeoutId;
+
+                    if (isMounted && !hasTransitionedIn) {
+                        setHasTransitionedIn(true);
+                    } else if (!isMounted && hasTransitionedIn) {
+                        timeoutId = setTimeout(() => setHasTransitionedIn(false), unmountDelay);
+                    }
+                    return () => {
+                        clearTimeout(timeoutId);
+                    };
+                }, [unmountDelay, isMounted, hasTransitionedIn]);
+
+                return hasTransitionedIn;
+            };
 
             const [currentSelection, setCurrentSelection] = useState("")
 
@@ -43,6 +62,7 @@
                     break;
             }
 
+
             function com13Active(e) {
                 e.target.src = ICON_LINKS.COM13_ACTIVE
             }
@@ -65,8 +85,8 @@
 
             return (
                 <>
-                    <nav aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
-                        <ol className="breadcrumb" style={{ backgroundColor: "#202020" }}>
+                    <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
+                        <ol className="breadcrumb" style={{ backgroundColor: "#fefdfe" }}>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/the-albany-room/"
                                 className="inactive-link">The Albany Room Home</a></li>
                             <li className="breadcrumb-item"><a href="https://museumofpoliticalcorruption.org/municipal-mischief/"
@@ -75,29 +95,33 @@
                         </ol>
                     </nav>
 
-                    <div className="header-section">
-                        <p className="introduction-text">The fight against political corruption has a history as long as corruption itself. </p>
-                        <p className="directions"><b>Learn about city-level anti-corruption efforts in Albany by selecting an organization
-                            below.</b></p>
-                    </div>
+                    <p className="page-title">The Fight Against Corruption</p>
 
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center">
-                        <div className="card-group icon-card-group">
-                            <div className="card icon-card" onClick={() => handleClick("com13")}>
-                                <img className="card-img-top" src={(currentSelection == "com13") ? ICON_LINKS.COM13_ACTIVE : ICON_LINKS.COM13_INACTIVE} alt="The Committee of 13" onMouseEnter={com13Active} onMouseLeave={(currentSelection == "com13") ? com13Active : com13Inactive} />
-                            </div>
+                    <p className="introduction-text">The fight against political corruption has a history as long as corruption itself.</p>
 
-                            <div className="card icon-card" onClick={() => handleClick("brothers")}>
-                                <img className="card-img-top" src={(currentSelection == "brothers") ? ICON_LINKS.BROTHERS_ACTIVE : ICON_LINKS.BROTHERS_INACTIVE} alt="The Brothers" onMouseEnter={brothersActive} onMouseLeave={(currentSelection == "brothers") ? brothersActive : brothersInactive} />
+                    <div className="toggle-and-views">
+                        <div className="header-section">
+                            <p className="directions"><b>Learn about city-level anti-corruption efforts in Albany by selecting an organization
+                                below.</b></p>
+                        </div>
+                        <div className="toggle-view-div d-flex align-items-center justify-content-center">
+                            <div className="card-group icon-card-group">
+                                <div className="card icon-card" onClick={() => handleClick("com13")}>
+                                    <img className="card-img-top" src={(currentSelection == "com13") ? ICON_LINKS.COM13_ACTIVE : ICON_LINKS.COM13_INACTIVE} alt="The Committee of 13" onMouseEnter={com13Active} onMouseLeave={(currentSelection == "com13") ? com13Active : com13Inactive} />
+                                </div>
+
+                                <div className="card icon-card" onClick={() => handleClick("brothers")}>
+                                    <img className="card-img-top" src={(currentSelection == "brothers") ? ICON_LINKS.BROTHERS_ACTIVE : ICON_LINKS.BROTHERS_INACTIVE} alt="The Brothers" onMouseEnter={brothersActive} onMouseLeave={(currentSelection == "brothers") ? brothersActive : brothersInactive} />
+                                </div>
                             </div>
                         </div>
-
+                        {currentSelection && <div className="committee-card d-flex align-items-center justify-content-center">
+                            <p className="committee-title">{COMMITTEE_TITLE}</p>
+                            <p className="committee-details">{COMMITTEE_CONTENT}</p>
+                        </div>}
                     </div>
 
-                    <div className="header-section committee">
-                        <p className="committee-title">{COMMITTEE_TITLE}</p>
-                        <p>{COMMITTEE_CONTENT}</p>
-                    </div>
+
                 </>)
         }
 
