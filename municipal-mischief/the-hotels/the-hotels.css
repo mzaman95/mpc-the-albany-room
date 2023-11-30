@@ -1,6 +1,3 @@
-/*
-Breadcrumbs
-*/
 /* Breadcrumbs */
 .albany-room-breadcrumbs {
   margin-left: 35px !important;
@@ -23,6 +20,18 @@ Breadcrumbs
   color: #b758e7;
   text-decoration: underline;
 }
+
+/* Page Title */
+.page-title {
+  margin-left: 75px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 68px !important;
+  text-transform: uppercase !important;
+  color: #202020;
+  margin-bottom: 20px !important;
+}
+
 /*
 Header Section
 */
