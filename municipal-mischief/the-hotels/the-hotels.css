@@ -1,19 +1,28 @@
 /*
 Breadcrumbs
 */
+/* Breadcrumbs */
+.albany-room-breadcrumbs {
+  margin-left: 35px !important;
+}
+
+.breadcrumb {
+  padding: 0px !important;
+}
+
 .breadcrumb-item {
   font-family: "Covered By Your Grace", sans-serif;
   text-transform: uppercase;
 }
 
 .inactive-link {
-  color: #fff;
+  color: #9933cc;
 }
 
 .inactive-link:hover {
-  color: #f9ddff;
+  color: #b758e7;
+  text-decoration: underline;
 }
-
 /*
 Header Section
 */
