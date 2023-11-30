@@ -228,31 +228,33 @@
 
                     <p className="introduction-text">Albany’s hotels are part of the city’s character.  As a center for business and politics, even before becoming the state capital, the city’s hotels attracted tourists, business people, and politicians needing a place to stay.</p>
 
-                    <div className="header-section">
-                        <p class="teaser-text">What happened <span style={{ color: "#9933cc" }}>behind closed doors</span> in some of the more notorious Hotels in Albany?
-                        </p>
-                        <p className="directions"><b>Click on a door to explore the story within.</b></p>
-                    </div>
-
-                    <div className="toggle-view-div d-flex align-items-center justify-content-center">
-                        <div className="card-group icon-card-group">
-                            <div className="card icon-card" onClick={() => handleClick("delevan")}>
-                                <img className="card-img-top" src={(currentSelection == "delevan") ? ICON_LINKS.DELEVAN_ACTIVE : ICON_LINKS.DELEVAN_NORMAL} alt="Delevan House" onMouseEnter={(currentSelection == "delevan") ? delevanActive : delevanHover} onMouseLeave={(currentSelection == "delevan") ? delevanActive : delevanNormal} />
-                            </div>
-                            <div className="card icon-card" onClick={() => handleClick("kenmore")}>
-                                <img className="card-img-top" src={(currentSelection == "kenmore") ? ICON_LINKS.KENMORE_ACTIVE : ICON_LINKS.KENMORE_NORMAL} alt="Kenmore Hotel" onMouseEnter={(currentSelection == "kenmore") ? kenmoreActive : kenmoreHover} onMouseLeave={(currentSelection == "kenmore") ? kenmoreActive : kenmoreNormal} />
-                            </div>
-                            <div className="card icon-card" onClick={() => handleClick("stanwix")}>
-                                <img className="card-img-top" src={(currentSelection == "stanwix") ? ICON_LINKS.STANWIX_ACTIVE : ICON_LINKS.STANWIX_NORMAL} alt="Stanwix Hall" onMouseEnter={(currentSelection == "stanwix") ? stanwixActive : stanwixHover} onMouseLeave={(currentSelection == "stanwix") ? stanwixActive : stanwixNormal} />
-                            </div>
-                            <div className="card icon-card" onClick={() => handleClick("ten")}>
-                                <img className="card-img-top" src={(currentSelection == "ten") ? ICON_LINKS.TEN_ACTIVE : ICON_LINKS.TEN_NORMAL} alt="Ten Eyck Hotel" onMouseEnter={(currentSelection == "ten") ? tenActive : tenHover} onMouseLeave={(currentSelection == "ten") ? tenActive : tenNormal} />
-                            </div>
-                            <div className="card icon-card" onClick={() => handleClick("dewitt")}>
-                                <img className="card-img-top" src={(currentSelection == "dewitt") ? ICON_LINKS.DEWITT_ACTIVE : ICON_LINKS.DEWITT_NORMAL} alt="Dewitt Clinton Hotel" onMouseEnter={(currentSelection == "dewitt") ? dewittActive : dewittHover} onMouseLeave={(currentSelection == "dewitt") ? dewittActive : dewittNormal} />
+                    <div class="toggle-and-views">
+                        <div className="header-section">
+                            <p className="teaser-text">What happened <span style={{ color: "#9933cc" }}>behind closed doors</span> in some of the more notorious hotels in Albany?
+                            </p>
+                            <p className="directions"><b>Click on a door to explore the story within.</b></p>
+                        </div>
+                        <div className="toggle-view-div d-flex align-items-center justify-content-center">
+                            <div className="card-group icon-card-group">
+                                <div className="card icon-card" onClick={() => handleClick("delevan")}>
+                                    <img className="card-img-top" src={(currentSelection == "delevan") ? ICON_LINKS.DELEVAN_ACTIVE : ICON_LINKS.DELEVAN_NORMAL} alt="Delevan House" onMouseEnter={(currentSelection == "delevan") ? delevanActive : delevanHover} onMouseLeave={(currentSelection == "delevan") ? delevanActive : delevanNormal} />
+                                </div>
+                                <div className="card icon-card" onClick={() => handleClick("kenmore")}>
+                                    <img className="card-img-top" src={(currentSelection == "kenmore") ? ICON_LINKS.KENMORE_ACTIVE : ICON_LINKS.KENMORE_NORMAL} alt="Kenmore Hotel" onMouseEnter={(currentSelection == "kenmore") ? kenmoreActive : kenmoreHover} onMouseLeave={(currentSelection == "kenmore") ? kenmoreActive : kenmoreNormal} />
+                                </div>
+                                <div className="card icon-card" onClick={() => handleClick("stanwix")}>
+                                    <img className="card-img-top" src={(currentSelection == "stanwix") ? ICON_LINKS.STANWIX_ACTIVE : ICON_LINKS.STANWIX_NORMAL} alt="Stanwix Hall" onMouseEnter={(currentSelection == "stanwix") ? stanwixActive : stanwixHover} onMouseLeave={(currentSelection == "stanwix") ? stanwixActive : stanwixNormal} />
+                                </div>
+                                <div className="card icon-card" onClick={() => handleClick("ten")}>
+                                    <img className="card-img-top" src={(currentSelection == "ten") ? ICON_LINKS.TEN_ACTIVE : ICON_LINKS.TEN_NORMAL} alt="Ten Eyck Hotel" onMouseEnter={(currentSelection == "ten") ? tenActive : tenHover} onMouseLeave={(currentSelection == "ten") ? tenActive : tenNormal} />
+                                </div>
+                                <div className="card icon-card" onClick={() => handleClick("dewitt")}>
+                                    <img className="card-img-top" src={(currentSelection == "dewitt") ? ICON_LINKS.DEWITT_ACTIVE : ICON_LINKS.DEWITT_NORMAL} alt="Dewitt Clinton Hotel" onMouseEnter={(currentSelection == "dewitt") ? dewittActive : dewittHover} onMouseLeave={(currentSelection == "dewitt") ? dewittActive : dewittNormal} />
+                                </div>
                             </div>
                         </div>
                     </div>
+
 
                     <div className="header-section hotel">
                         <p className="hotel-title">{HOTEL_NAME}</p>
