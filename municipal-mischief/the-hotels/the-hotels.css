@@ -32,6 +32,14 @@
   margin-bottom: 20px !important;
 }
 
+/* Intro Text */
+.introduction-text {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: #202020;
+  margin-left: 75px !important;
+}
+
 /*
 Header Section
 */
