@@ -253,15 +253,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div className="header-section hotel">
+                            <div className="hotel-content">
+                                <img src={HOTEL_IMAGE} className="img-fluid w-50 hotel-image" alt={HOTEL_NAME} />
+                                <div className="hotel-details">
+                                    <p className="hotel-title">{HOTEL_NAME}</p>
+                                    <p>{HOTEL_KNOWN_FOR}</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
 
-                    <div className="header-section hotel">
-                        <p className="hotel-title">{HOTEL_NAME}</p>
-                        <p>{HOTEL_LOCATION}</p>
-                        <p>{HOTEL_KNOWN_FOR}</p>
-                        <img src={HOTEL_IMAGE} className="img-fluid w-50" alt={HOTEL_NAME} />
-                    </div>
+
+
+
                     <div className="header-section hotel">
                         {currentSelection && <p className="hotel-title">VIP Guests</p>}
                         <div className="card-deck">

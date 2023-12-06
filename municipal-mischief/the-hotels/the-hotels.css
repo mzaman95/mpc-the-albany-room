@@ -127,10 +127,29 @@ Content
 }
 
 .hotel-title {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
   color: white !important;
-  font-family: "Gotham Bold", sans-serif;
-  font-size: 30px;
-  margin-bottom: 10px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.hotel-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.hotel-details {
+  margin: auto;
+}
+
+.hotel-image {
+  border-radius: 16px !important;
+  max-height: 400px;
 }
 
 .teaser-text {
