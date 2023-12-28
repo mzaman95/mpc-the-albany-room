@@ -1,0 +1,79 @@
+/* Breadcrumbs */
+.albany-room-breadcrumbs {
+  margin-left: 35px !important;
+}
+
+.breadcrumb {
+  padding: 0px !important;
+}
+
+.breadcrumb-item {
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+}
+
+.inactive-link {
+  color: #9933cc;
+}
+
+.inactive-link:hover {
+  color: #b758e7;
+  text-decoration: underline;
+}
+
+/* Page Title */
+.page-title {
+  margin-left: 75px !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-weight: bold !important;
+  font-size: 68px !important;
+  text-transform: uppercase !important;
+  color: #202020;
+  margin-bottom: 20px !important;
+}
+
+/* Intro Text */
+.introduction-text {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: #202020;
+  margin-left: 75px !important;
+}
+
+/* Crime Badges */
+.crime-badges {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+/* Crime Badge */
+
+.crime-badge {
+  display: inline-flex;
+  justify-content: center; /* center the content horizontally */
+  align-items: center;
+  border-radius: 4px;
+  /*padding-top: 12px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 0px;
+  */
+  background-color: #f0f0f0;
+  text-align: center;
+  font-family: "Gotham Book", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  color: #202020;
+}
+
+.crime-badge:hover {
+  color: blue;
+}
