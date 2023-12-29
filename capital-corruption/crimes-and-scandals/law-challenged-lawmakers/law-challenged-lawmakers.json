@@ -1,0 +1,127 @@
+[
+  {
+    "id": "C1",
+    "name": "Bribery",
+    "lawmakers": [
+      {
+        "name": "William F. Boyland Jr.",
+        "subtitle": "Assemblyman, Brooklyn",
+        "description": "In 2014, Boyland was convicted of 21 felony counts, including extortion, bribery, and mail fraud."
+      },
+      {
+        "name": "Carl Kruger",
+        "subtitle": "Senator, Brooklyn",
+        "description": "Pleaded guilty to conspiracy to commit mail and wire fraud and two counts of bribery conspiracy."
+      },
+      {
+        "name": "Malcolm A. Smith",
+        "subtitle": "Senator, Queens",
+        "description": "Convicted on February 5, 2015 of conspiracy, wire fraud and extortion."
+      },
+      {
+        "name": "Eric A. Stevenson",
+        "subtitle": "Assemblyman, Bronx",
+        "description": "Convicted of extortion and accepting more than $20,000 in bribes."
+      }
+    ]
+  },
+  {
+    "id": "C2",
+    "name": "Extortion",
+    "lawmakers": [
+      {
+        "name": "Brian M. McLaughlin",
+        "subtitle": "Assemblyman, Queens",
+        "description": "Pleaded guilty to racketeering charges; in various criminal schemes, took money from taxpayers, labor organizations, and contractors."
+      },
+      {
+        "name": "Clarence Norman Jr.",
+        "subtitle": "Assemblyman, Brooklyn",
+        "description": "Convicted of accepting illegal campaign contributions and extorting money from judicial candidates."
+      },
+      {
+        "name": "Dean G. Skelos",
+        "subtitle": "Senator, Long Island",
+        "description": "Convicted of bribery, extortion and conspiracy for using his position as majority leader to pressure companies into hiring his son."
+      }
+    ]
+  },
+  {
+    "id": "C3",
+    "name": "Graft",
+    "lawmakers": [
+      {
+        "name": "Pedro Espada Jr.",
+        "subtitle": "Senator, Bronx",
+        "description": "Convicted of stealing hundreds of thousands of dollars from his nonprofit health care network."
+      },
+      {
+        "name": "Efraín González Jr.",
+        "subtitle": "Senator, Bronx",
+        "description": "Pleaded guilty to two counts of mail fraud and two counts of conspiracy."
+      },
+      {
+        "name": "Shirley L. Huntley",
+        "subtitle": "Senator, Queens",
+        "description": "Pleaded guilty in federal court to stealing state grants."
+      },
+      {
+        "name": "Alan G. Hevesi",
+        "subtitle": "State Comptroller",
+        "description": "Pleaded guilty to using state workers to chauffeur his wife;  he also pleaded guilty for his role in a corruption scandal involving the state pension fund."
+      },
+      {
+        "name": "Hiram Monserrate",
+        "subtitle": "Senator, Queens",
+        "description": "Pleaded guilty to charges of mail fraud for using city money to finance a political campaign."
+      }
+    ]
+  },
+  {
+    "id": "C4",
+    "name": "Quid Pro Quo",
+    "lawmakers": [
+      {
+        "name": "Diane M. Gordon",
+        "subtitle": "Assemblywoman, Brooklyn",
+        "description": "Convicted on  two counts of receiving bribes, two counts of official misconduct and two counts of receiving reward for official misconduct."
+      },
+      {
+        "name": "Anthony S. Seminerio",
+        "subtitle": "Assemblyman, Queens",
+        "description": "Indicted  for  Honest services fraud.  In June 2009, he pleaded guilty to taking large sums of money from hospitals through a consulting firm while serving as a member of the New York State Assembly. "
+      },
+      {
+        "name": "Sheldon Silver",
+        "subtitle": "Assembly Speaker",
+        "description": "Convicted of taking in nearly $4 million in exchange for using his position to help benefit a researcher and two real estate developers."
+      }
+    ]
+  },
+  {
+    "id": "C5",
+    "name": "Sex Scandals",
+    "lawmakers": [
+      {
+        "name": "Dennis H. Gabryszak",
+        "subtitle": "Assemblyman",
+        "description": "Resigned after being accused of sexual harassment by members of his staff."
+      },
+      {
+        "name": "Sam Hoyt",
+        "subtitle": "Assemblyman",
+        "description": "Banned from having interns in his office after having an affair with an intern."
+      },
+      {
+        "name": "Micah Z. Kellner",
+        "subtitle": "Assemblyman, Manhattan",
+        "description": "Sanctioned for sexually harassing members of his staff."
+      },
+      {
+        "name": "Vito J. Lopez",
+        "subtitle": "Assemblyman, Brooklyn",
+        "description": "Sanctioned by the Legislative Ethics Commission for sexually harassing members of his staff; he was stripped of  seniority and forbidden from employing interns under the age of 21."
+      }
+    ]
+  }
+]

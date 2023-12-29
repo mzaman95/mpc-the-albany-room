@@ -55,25 +55,22 @@
 /* Crime Badge */
 
 .crime-badge {
-  display: inline-flex;
-  justify-content: center; /* center the content horizontally */
-  align-items: center;
+  line-height: normal;
   border-radius: 4px;
-  /*padding-top: 12px;
-  padding-right: 12px;
-  padding-left: 12px;
-  padding-bottom: 0px;
-  */
-  background-color: #f0f0f0;
-  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-family: "Gotham Book", sans-serif;
   font-weight: bold;
   font-size: 16px;
-  line-height: 1.6em;
   text-transform: uppercase;
   color: #202020;
+  background-color: #f0f0f0;
 }
 
-.crime-badge:hover {
-  color: blue;
+.crime-badge:hover,
+.crime-badge.selected {
+  color: #9933cc;
+  background-color: #efe0f6;
 }

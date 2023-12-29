@@ -17,11 +17,6 @@
 
     <script type="text/babel" data-presets="react,stage-3">
 
-        const CrimeBadge = (props) => {
-            const { category } = props
-            return <button className="crime-badge">{category}</button>
-        }
-
         const LawChallengedLawmakersPage = () => {
             const { useEffect, useState } = React
 
@@ -51,11 +46,11 @@
                         <p>Instead of making laws, some politicians have been breaking laws.</p>
                         <p className="directions"><b>Select a category to learn more about the lawmakers who committed the crime.</b></p>
                         <div className="crime-badges">
-                            <CrimeBadge category="Bribery" />
-                            <CrimeBadge category="Extortion" />
-                            <CrimeBadge category="Graft" />
-                            <CrimeBadge category="Quid Pro Quo" />
-                            <CrimeBadge category="Sex Scandals" />
+                            <button className={`crime-badge ${currentSelection == "Bribery" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Bribery")}>Bribery</button>
+                            <button className={`crime-badge ${currentSelection == "Extortion" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Extortion")}>Extortion</button>
+                            <button className={`crime-badge ${currentSelection == "Graft" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Graft")}>Graft</button>
+                            <button className={`crime-badge ${currentSelection == "Quid Pro Quo" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Quid Pro Quo")}>Quid Pro Quo</button>
+                            <button className={`crime-badge ${currentSelection == "Sex Scandals" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Sex Scandals")}>Sex Scandals</button>
                         </div>
                     </div>
 
