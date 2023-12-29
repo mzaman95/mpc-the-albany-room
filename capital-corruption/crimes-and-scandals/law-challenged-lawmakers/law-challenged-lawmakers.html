@@ -17,14 +17,47 @@
 
     <script type="text/babel" data-presets="react,stage-3">
 
+        const LawmakerCard = (props) => {
+            const { name, subtitle, description } = props
+            return (
+                <div className="card lawmaker-card">
+                    <div className="card-body">
+                        <h5 className="card-title">{name}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">{subtitle}</h6>
+                        <p className="card-text">{description}</p>
+                    </div>
+                </div>
+            )
+        }
+
         const LawChallengedLawmakersPage = () => {
             const { useEffect, useState } = React
 
             const [currentSelection, setCurrentSelection] = useState("")
+            const [criminalData, setCriminalData] = useState([]);
+            const [lawmakers, setLawmakers] = useState([])
 
-            const handleClick = (value) => {
-                setCurrentSelection(value)
+            useEffect(() => {
+                fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2023/12/law-challenged-lawmakers.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        setCriminalData(data)
+                    })
+            }, [])
+
+            const handleClick = (category) => {
+                setCurrentSelection(category)
+                function filter_crime_categories(data) {
+                    return data.name == category;
+                }
+                let data = criminalData.filter(filter_crime_categories);
+                let lawmakersArray = data[0].lawmakers
+                setLawmakers(lawmakersArray)
             }
+
+            const lawmakersList = lawmakers.map((lawmaker, index) => {
+                return <LawmakerCard name={lawmaker.name} subtitle={lawmaker.subtitle} description={lawmaker.description} />
+            })
 
             return (
                 <>
@@ -46,11 +79,14 @@
                         <p>Instead of making laws, some politicians have been breaking laws.</p>
                         <p className="directions"><b>Select a category to learn more about the lawmakers who committed the crime.</b></p>
                         <div className="crime-badges">
-                            <button className={`crime-badge ${currentSelection == "Bribery" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Bribery")}>Bribery</button>
-                            <button className={`crime-badge ${currentSelection == "Extortion" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Extortion")}>Extortion</button>
-                            <button className={`crime-badge ${currentSelection == "Graft" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Graft")}>Graft</button>
-                            <button className={`crime-badge ${currentSelection == "Quid Pro Quo" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Quid Pro Quo")}>Quid Pro Quo</button>
-                            <button className={`crime-badge ${currentSelection == "Sex Scandals" ? `selected` : `inactive`}`} onClick={() => setCurrentSelection("Sex Scandals")}>Sex Scandals</button>
+                            <button className={`crime-badge ${currentSelection == "Bribery" ? `selected` : `inactive`}`} onClick={() => handleClick("Bribery")}>Bribery</button>
+                            <button className={`crime-badge ${currentSelection == "Extortion" ? `selected` : `inactive`}`} onClick={() => handleClick("Extortion")}>Extortion</button>
+                            <button className={`crime-badge ${currentSelection == "Graft" ? `selected` : `inactive`}`} onClick={() => handleClick("Graft")}>Graft</button>
+                            <button className={`crime-badge ${currentSelection == "Quid Pro Quo" ? `selected` : `inactive`}`} onClick={() => handleClick("Quid Pro Quo")}>Quid Pro Quo</button>
+                            <button className={`crime-badge ${currentSelection == "Sex Scandals" ? `selected` : `inactive`}`} onClick={() => handleClick("Sex Scandals")}>Sex Scandals</button>
+                        </div>
+                        <div className="lawmaker-cards card-deck">
+                            {lawmakersList}
                         </div>
                     </div>
 
