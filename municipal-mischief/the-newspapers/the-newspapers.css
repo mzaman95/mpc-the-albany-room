@@ -41,27 +41,30 @@
 }
 
 /* Quiz Area */
-.app {
-  background-color: #252d4a;
+.quiz {
+  background-color: #202020;
   color: white !important;
-  width: 450px;
-  min-height: 200px;
-  height: min-content;
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 16px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 20px !important;
+  padding-bottom: 60px !important;
+  margin-left: 75px !important;
+  margin-bottom: 80px !important;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .score-section {
   display: flex;
-  font-size: 24px;
+  font-size: 28px;
   align-items: center;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  padding: 40px;
   width: 100%;
   position: relative;
 }
@@ -71,6 +74,7 @@
 }
 
 .question-count span {
+  font-weight: 700;
   font-size: 28px;
 }
 

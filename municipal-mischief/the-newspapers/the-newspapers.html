@@ -50,33 +50,43 @@
                 },
             ];
 
-            const [currentQuestion, setCurrentQuestion] = useState(0);
-            const [showScore, setShowScore] = useState(false);
-            const [score, setScore] = useState(0);
-            const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
+            const [currentQuestion, setCurrentQuestion] = useState(0)
+            const [showScore, setShowScore] = useState(false)
+            const [score, setScore] = useState(0)
+            const [isAnswerCorrect, setIsAnswerCorrect] = useState(false)
             const [showAnswerDescription, setShowAnswerDescription] = useState(false)
+            const [isDisabled, setIsDisabled] = useState(false)
 
             const handleAnswerOptionClick = (isCorrect) => {
                 setShowAnswerDescription(true)
+                setIsDisabled(true)
                 if (isCorrect) {
-                    setScore(score + 1);
+                    setScore(score + 1)
                     setIsAnswerCorrect(true)
                 } else {
                     setIsAnswerCorrect(false)
                 }
-
-                /*
-                const nextQuestion = currentQuestion + 1;
-                if (nextQuestion < questions.length) {
-                    setCurrentQuestion(nextQuestion);
-                } else {
-                    setShowScore(true);
-                }
-                */
             };
 
             const handleNextQuestion = () => {
+                setIsDisabled(false)
+                const nextQuestion = currentQuestion + 1
+                if (nextQuestion < questions.length) {
+                    setCurrentQuestion(nextQuestion)
+                    setShowAnswerDescription(false)
+
+                } else {
+                    setShowScore(true)
+                }
                 console.log("Next question...")
+            }
+
+            const handleRetake = () => {
+                setShowScore(false)
+                setScore(0)
+                setCurrentQuestion(0)
+                setShowAnswerDescription(false)
+                setIsDisabled(false)
             }
 
             return (
@@ -95,13 +105,18 @@
 
                     <p className="introduction-text">One of the earliest forms of social media, newspapers helped influence public opinion, and were not infrequently used to promote the interests of their owners and influential politicians.</p>
 
-                    <div className='app'>
-                        {showScore ? (
-                            <div className='score-section'>
-                                You scored {score} out of {questions.length}
+                    {showScore ? (
+                        <>
+                            <div className='quiz'>
+                                <div className='score-section'>
+                                    You scored {score} out of {questions.length}
+                                </div>
                             </div>
-                        ) : (
-                            <>
+                            <button onClick={() => handleRetake()}>Retake Quiz</button>
+                        </>
+                    ) : (
+                        <>
+                            <div className='quiz'>
                                 <div className='question-section'>
                                     <div className='question-count'>
                                         <span>Question {currentQuestion + 1}</span>/{questions.length}
@@ -110,22 +125,23 @@
                                 </div>
                                 <div className='answer-section'>
                                     {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                        <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                        <button disabled={isDisabled} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                                     ))}
                                 </div>
-                            </>
-                        )}
-                    </div>
-
-                    {showAnswerDescription &&
-                        (<>
-                            <div className="answer-description">
-                                {isAnswerCorrect ? <h1>That's correct!</h1> : <h1>Oops, that's incorrect!</h1>}
-                                <p>{questions[currentQuestion].answerDescription}</p>
                             </div>
+                            {
+                                showAnswerDescription &&
+                                (<>
+                                    <div className="answer-description">
+                                        {isAnswerCorrect ? <h1>That's correct!</h1> : <h1>Oops, that's incorrect!</h1>}
+                                        <p>{questions[currentQuestion].answerDescription}</p>
+                                    </div>
 
-                            <button onClick={() => handleNextQuestion()}>Next</button>
-                        </>)}
+                                    <button onClick={() => handleNextQuestion()}>Next</button>
+                                </>)
+                            }
+                        </>
+                    )}
                 </>)
         }
 
