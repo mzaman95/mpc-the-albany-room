@@ -1,0 +1,77 @@
+[
+  {
+    "newspaperName": "Albany Evening Journal",
+    "questionText": "Which political party did the Albany Evening Journal promote?",
+    "answerOptions": [
+      { "answerText": "Democratic", "isCorrect": false },
+      { "answerText": "Republican", "isCorrect": true },
+      { "answerText": "Independent", "isCorrect": false }
+    ],
+    "answerDescription": "The Albany Evening Journal was Republican…eventually. Thurlow Weed started The Albany Evening Journal to support Anti- Masonry in 1830, but soon began to support the Whig Party. When the Whig party dissolved, he and his newspaper began supporting the new Republican party around 1854.",
+    "details": "In 1889 Weed’s grandson, William “Billy”  Barnes bought The Albany Evening Journal promoting it as “the only Republican paper in Albany.”  Barnes was the last Republican Party boss in Albany County.  In 1922 corruption scandals over the diversion of city-purchased coal to party favorites  helped propel Democrat William Hackett to mayoral victory, marking the beginning of hundred year Democratic rule of Albany’s City Hall.",
+    "learnMoreOptions": [
+      {
+        "topic": "William “Billy” Barnes",
+        "link": "https://en.wikipedia.org/wiki/William_Barnes_Jr."
+      },
+      {
+        "topic": "Thurlow Weed",
+        "link": "https://www.britannica.com/biography/Thurlow-Weed"
+      },
+      {
+        "topic": "the history of the Republican Party",
+        "link": "https://www.britannica.com/topic/Republican-Party"
+      }
+    ]
+  },
+  {
+    "newspaperName": "Albany Argus",
+    "questionText": "Which political party did the Albany Argus promote?",
+    "answerOptions": [
+      { "answerText": "Democratic", "isCorrect": true },
+      { "answerText": "Republican", "isCorrect": false },
+      { "answerText": "Independent", "isCorrect": false }
+    ],
+    "answerDescription": "The Albany Argus Newspaper was Democratic but, it depends on the date. The Albany Argus was published as a semiweekly newspaper beginning in 1813, well before the modern Democratic Party began coalescing in the 1840’s and before the name was officially adopted in 1844.",
+    "details": "By 1825, The Argus was published as a daily newspaper.  The new publisher, Edwin Croswell had been encouraged to join the paper by then-State Senator Martin Van Buren and his political associates known as the Albany Regency.  The Regency became one of the first American political machines dominating New York State’s government between 1822 and 1838. The Argus was the Regency’s voice, echoing Van Buren’s positions on issues like the construction of the Erie Canal and the establishment of a national bank.  The Albany Regency purported to be against political corruption, but also created the “spoils system” which rewards the supporters of a party with government positions given to friends (cronyism) and relatives (nepotism).  By the time The Argus was closed in 1921, it had helped elect President Grover Cleveland.  Cleveland’s Secretary of the Treasury, Daniel Manning, had been the owner of The Argus, and John H. Manning, Daniel’s son, was the current owner…and the Mayor of Albany.",
+    "learnMoreOptions": [
+      {
+        "topic": "the history of the Democratic Party",
+        "link": "https://www.britannica.com/topic/Democratic-Party"
+      },
+      {
+        "topic": "The Albany Argus",
+        "link": "https://hoxsie.org/2015/11/23/albany-newspapers-1886/"
+      },
+      {
+        "topic": "Martin Van Buren",
+        "link": "https://www.britannica.com/biography/Martin-Van-Buren"
+      }
+    ]
+  },
+  {
+    "newspaperName": "Albany Times Union",
+    "questionText": "Which political party did the Albany Times Union promote?",
+    "answerOptions": [
+      { "answerText": "Democratic", "isCorrect": false },
+      { "answerText": "Republican", "isCorrect": false },
+      { "answerText": "Independent", "isCorrect": true }
+    ],
+    "answerDescription": "The Albany Times Union was mostly independent. In 1856, the first issue of The Albany Times Union stated: 'There has been a very general demand for a new paper, which shall INFLEXIBLY adhere to a INDEPENDENCE OF ALL PARTIES, SECTS, OR FACTIONS, and be free from the alloy of incessant political and sectarian controversies.' The Times Union has undergone many changes over its 160+ years operation, but today it is known for factual, politically neutral reporting.",
+    "details": "The Albany Times Union is the oldest continuously published daily newspaper in the Capital Region.  Its founders, working-class printers Alfred Stone, David M. Barnes, and Edwrd H. Boyd published the first 4-page issue on April 21, 1856.  Despite the nonpartisan intent of its founders, under the leadership of Martin P. Glynn (a one-year Governor of New York who remained as governor while still running the paper) the Times Union began supporting and taking favors from the O’Connell-Corning Democratic machine. When Gene Robb became publisher in the early 1960’s, theTimes Union became a  critic of the Democratic machine. ",
+    "learnMoreOptions": [
+      {
+        "topic": "The Albany Times Union",
+        "link": "https://extras.timesunion.com/tu150/overview/overview1.html"
+      },
+      {
+        "topic": "John Henry Farrell",
+        "link": "https://extras.timesunion.com/tu150/overview/overview3.html"
+      },
+      {
+        "topic": "Martin Glynn and Gene Robb",
+        "link": "https://extras.timesunion.com/tu150/stories/index.html"
+      }
+    ]
+  }
+]
