@@ -181,11 +181,21 @@
 }
 
 .next-button,
-.retake-button {
+.retake-button,
+.learn-more-button {
   font-family: "Gotham Medium", sans-serif;
   font-size: 16px;
   background-color: white;
   color: #202020;
+  border-radius: 100px;
+  padding-top: 20px;
+}
+
+.learn-more-button {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 16px;
+  background-color: #9933cc;
+  color: white;
   border-radius: 100px;
   padding-top: 20px;
 }
@@ -196,6 +206,12 @@
   background-color: #f0f0f0;
 }
 
+.learn-more-button:hover,
+.learn-more-button:active {
+  color: white;
+  background-color: #b758e7;
+}
+
 .final-page {
   padding: 40px;
   display: flex;
@@ -203,4 +219,17 @@
   gap: 40px;
   justify-content: center;
   align-items: center;
+}
+
+.action-button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Modal */
+.modal-body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  color: #202020;
 }
