@@ -56,7 +56,7 @@
 
 .score-section {
   display: flex;
-  font-size: 28px;
+  font-size: 30px;
   align-items: center;
 }
 
@@ -94,42 +94,86 @@
 
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
+  padding: 0px 40px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  gap: 20px;
 }
 
-button {
+.answer-choice {
   width: 100%;
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 700;
   font-size: 16px;
-  color: #ffffff;
-  background-color: #252d4a;
-  border-radius: 15px;
+  color: #202020;
+  background-color: #efe0f6;
+  border-radius: 16px;
   display: flex;
-  padding: 5px;
-  justify-content: flex-start;
-  align-items: center;
-  border: 5px solid #234668;
-  cursor: pointer;
+  padding: 10px 5px 0px 5px;
+  justify-content: center;
+  align-items: flex-end;
+  border: 3px solid #9933cc;
+  cursor: pointer !important;
 }
 
-.correct {
-  background-color: #2f922f;
+/*
+.is-disabled {
+  background-color: white !important;
+  color: #b5b5b5 !important;
+  border: 3px solid #b5b5b5 !important;
+}
+*/
+
+.show-answers.is-correct,
+.show-answers.is-correct:hover {
+  background-color: rgb(195, 249, 195);
+  color: #202020;
+  border: 3px solid green;
+  cursor: not-allowed;
 }
 
-.incorrect {
-  background-color: #ff3333;
+.show-answers.is-incorrect,
+.show-answers.is-incorrect:hover {
+  background-color: rgb(255, 190, 190);
+  color: #202020;
+  border: 3px solid red;
+  cursor: not-allowed;
 }
 
-button:hover {
-  background-color: #555e7d;
+.answer-choice:hover {
+  border: 3px solid white;
+  background-color: #9933cc;
+  color: white;
 }
 
-button:focus {
+.answer-choice:focus {
   outline: none;
 }
 
-button svg {
+.answer-choice svg {
   margin-right: 5px;
+}
+
+.answer-description-section {
+  padding: 80px 40px 40px 40px;
+}
+
+.answer-description {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: white;
+}
+
+.correct-message {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 26px !important;
+  color: rgb(195, 249, 195);
+}
+
+.incorrect-message {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 26px !important;
+  color: rgb(255, 190, 190);
 }

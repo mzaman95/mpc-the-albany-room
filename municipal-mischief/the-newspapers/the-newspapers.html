@@ -28,7 +28,7 @@
                         { answerText: 'Republican', isCorrect: true },
                         { answerText: 'Independent', isCorrect: false },
                     ],
-                    answerDescription: "The Albany Evening Journal was Republican…eventually. Thurlow Weed started The Albany Evening Journal to support Anti- Masonry in 1830, but soon began to support the Whig Party.When the Whig party dissolved, he and his newspaper began supporting the new Republican party around 1854."
+                    answerDescription: "The Albany Evening Journal was Republican…eventually. Thurlow Weed started The Albany Evening Journal to support Anti- Masonry in 1830, but soon began to support the Whig Party. When the Whig party dissolved, he and his newspaper began supporting the new Republican party around 1854."
                 },
                 {
                     questionText: 'Which political party did the Albany Argus promote?',
@@ -125,21 +125,22 @@
                                 </div>
                                 <div className='answer-section'>
                                     {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                        <button disabled={isDisabled} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                        <button className={`answer-choice ${isDisabled && `is-disabled`} ${showAnswerDescription && `show-answers`} ${(answerOption.isCorrect) ? `is-correct` : `is-incorrect`}`} disabled={isDisabled} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                                     ))}
                                 </div>
-                            </div>
-                            {
-                                showAnswerDescription &&
-                                (<>
-                                    <div className="answer-description">
-                                        {isAnswerCorrect ? <h1>That's correct!</h1> : <h1>Oops, that's incorrect!</h1>}
-                                        <p>{questions[currentQuestion].answerDescription}</p>
-                                    </div>
+                                {
+                                    showAnswerDescription &&
+                                    (<>
+                                        <div className="answer-description-section">
+                                            {isAnswerCorrect ? <p className="correct-message">That's correct!</p> : <p className="incorrect-message">Oops, that's incorrect!</p>}
+                                            <p className="answer-description">{questions[currentQuestion].answerDescription}</p>
+                                        </div>
+                                        <button onClick={() => handleNextQuestion()}>Next</button>
+                                    </>)
+                                }
 
-                                    <button onClick={() => handleNextQuestion()}>Next</button>
-                                </>)
-                            }
+                            </div>
+
                         </>
                     )}
                 </>)
