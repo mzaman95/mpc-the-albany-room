@@ -56,7 +56,9 @@
 
 .score-section {
   display: flex;
-  font-size: 30px;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
   align-items: center;
 }
 
@@ -176,4 +178,29 @@
   font-family: "Gotham Book", sans-serif;
   font-size: 26px !important;
   color: rgb(255, 190, 190);
+}
+
+.next-button,
+.retake-button {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 16px;
+  background-color: white;
+  color: #202020;
+  border-radius: 100px;
+  padding-top: 20px;
+}
+
+.next-button:hover,
+.retake-button:hover {
+  color: #202020;
+  background-color: #f0f0f0;
+}
+
+.final-page {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
 }

@@ -108,11 +108,14 @@
                     {showScore ? (
                         <>
                             <div className='quiz'>
-                                <div className='score-section'>
-                                    You scored {score} out of {questions.length}
+                                <div className="final-page">
+                                    <div className='score-section'>
+                                        You scored {score} out of {questions.length}
+                                    </div>
+                                    <button className="retake-button" onClick={() => handleRetake()}>Retake Quiz</button>
                                 </div>
+
                             </div>
-                            <button onClick={() => handleRetake()}>Retake Quiz</button>
                         </>
                     ) : (
                         <>
@@ -134,8 +137,8 @@
                                         <div className="answer-description-section">
                                             {isAnswerCorrect ? <p className="correct-message">That's correct!</p> : <p className="incorrect-message">Oops, that's incorrect!</p>}
                                             <p className="answer-description">{questions[currentQuestion].answerDescription}</p>
+                                            <button className="next-button" onClick={() => handleNextQuestion()}>Next</button>
                                         </div>
-                                        <button onClick={() => handleNextQuestion()}>Next</button>
                                     </>)
                                 }
 
