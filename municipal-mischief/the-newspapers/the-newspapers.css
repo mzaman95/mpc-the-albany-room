@@ -233,3 +233,58 @@
   font-size: 16px;
   color: #202020;
 }
+
+.resources-section {
+  margin: 20px;
+  padding: 40px;
+  background-color: #f0f0f0;
+  color: #202020;
+  border-radius: 16px;
+}
+
+.additional-resources-title {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 20px;
+  color: #202020;
+}
+
+.newspaper-details-section {
+  margin: 20px;
+  padding: 40px;
+  background-color: #efe0f6;
+  color: #202020;
+  border-radius: 16px;
+}
+
+.learn-more-link {
+  font-family: "Covered By Your Grace", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #9933cc;
+  text-decoration: none;
+}
+
+.learn-more-link:hover {
+  color: #b758e7;
+  text-decoration: underline;
+}
+
+.modal {
+  font-family: "Gotham";
+  border-radius: 16px !important;
+}
+
+.modal-header {
+  background-color: #9933cc;
+}
+
+.modal-title {
+  color: white !important;
+  font-family: "Covered By Your Grace", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px !important;
+}
+
+.x-button {
+  color: white;
+}
