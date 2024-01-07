@@ -39,3 +39,12 @@
   color: #202020;
   margin-left: 75px !important;
 }
+
+.subheading {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 30px !important;
+  font-weight: 700;
+  color: #202020;
+  margin-left: 75px !important;
+  margin-bottom: 10px !important;
+}
