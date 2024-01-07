@@ -43,6 +43,10 @@
                     <p className="subheading">Political Machine Organizational Flow Chart</p>
                     <p className="text">Albany’s  political machine had a very specific, hierarchical structure, which included hundreds of Committeemen at the bottom.  Above the Committeemen were the Ward Leaders.</p>
                     <p className="text"><b>Select a role to learn more about it.</b></p>
+                    <div className="organization-flow-chart-section">
+                        <button type="button" data-toggle="modal" data-target="#orgModal" className="ward-leader-button" onClick={() => handleWardLeaderClick()}>Ward Leader</button>
+                        <button type="button" data-toggle="modal" data-target="#orgModal" className="committeemen-button" onClick={() => handleCommitteemenClick()}>Committeemen</button>
+                    </div>
                     <h1>Under Construction: Organizational Flow Chart</h1>
 
                     <p className="subheading">The Political Machines of Albany’s Past</p>
