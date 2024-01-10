@@ -33,6 +33,36 @@
                 setModalDescription('Committeemen were members of the Albany County Democratic Committee (thus the name of their position). Voters knew that if they wanted the City to do something for them or their neighborhood, the way to get it done was to call your Committeeman.  No one considered calling the City employees in the appropriate department which would handle the request.  ')
             }
 
+            const PoliticalMachineCard = (props) => {
+                const { machineName, machineTime, machineDescription } = props
+                return <> <div>
+                    <p className="machine-name">{machineName}</p>
+                    <p className="machine-time">{machineTime}</p>
+                    <p className="machine-description">{machineDescription}</p>
+                </div></>
+            }
+
+            const politicalMachines = [
+                {
+                    machineName: "The Roscoe Conkling-Tom Platt- Chester A. Arthur Republican Machine",
+                    machineTime: "Late 1800s/early 1900s",
+                    machineDescription: "The State-wide NY Republican machine under Senators Roscoe Conkling and Tom Platt ruled state politics in New York and Albany for almost 30 years, using patronage and strong-arm tactics to muscle its will.",
+                    machineLearnMoreLink: ""
+                },
+                {
+                    machineName: "The Barnes Machine",
+                    machineTime: "1894-1921",
+                    machineDescription: "William Barnes Jr. (1866 – 1930) was the owner and publisher of the Albany Evening Journal.  Barnes’ Republican political machine had a thirty-year reign over Albany politics from 1891-1921.  Like many political machines of the time, the Barnes machine was involved in distributing government jobs and contracts in exchange for political loyalty and support.",
+                    machineLearnMoreLink: ""
+                },
+                {
+                    machineName: "The Corning-O’Connell Machine",
+                    machineTime: "1921 - 1983 (and beyond)",
+                    machineDescription: "Known for its ability to deliver services and support to constituents in exchange for political loyalty, the Corning-O'Connell political machine played a significant role in shaping Albany's political landscape during the 20th century.",
+                    machineLearnMoreLink: ""
+                }
+            ]
+
             return (
                 <>
                     <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
@@ -77,6 +107,10 @@
                     </div>
 
                     <p className="subheading">The Political Machines of Albany’s Past</p>
+
+                    {politicalMachines.map((politicalMachine) => {
+                        return <PoliticalMachineCard machineName={politicalMachine.machineName} />
+                    })}
 
                     <div>
                         <p className="machine-name">The Roscoe Conkling-Tom Platt- Chester A. Arthur Republican Machine</p>
