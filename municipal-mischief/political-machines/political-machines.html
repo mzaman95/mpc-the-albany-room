@@ -34,12 +34,19 @@
             }
 
             const PoliticalMachineCard = (props) => {
-                const { machineName, machineTime, machineDescription } = props
-                return <> <div>
-                    <p className="machine-name">{machineName}</p>
-                    <p className="machine-time">{machineTime}</p>
-                    <p className="machine-description">{machineDescription}</p>
-                </div></>
+                const { machineName, machineTime, machineDescription, machineLearnMoreLink } = props
+                return (<>
+                    <div className="political-machine-card">
+                        <div className="political-machine-card-row-1">
+                            <p className="machine-time">{machineTime}</p>
+                        </div>
+                        <div className="political-machine-card-row-2">
+                            <p className="machine-name">{machineName}</p>
+                            <p className="machine-description">{machineDescription}</p>
+                            {machineLearnMoreLink && <p className="machine-learn-more-link">{machineLearnMoreLink}</p>}
+                        </div>
+                    </div>
+                </>)
             }
 
             const politicalMachines = [
@@ -47,7 +54,7 @@
                     machineName: "The Roscoe Conkling-Tom Platt- Chester A. Arthur Republican Machine",
                     machineTime: "Late 1800s/early 1900s",
                     machineDescription: "The State-wide NY Republican machine under Senators Roscoe Conkling and Tom Platt ruled state politics in New York and Albany for almost 30 years, using patronage and strong-arm tactics to muscle its will.",
-                    machineLearnMoreLink: ""
+                    machineLearnMoreLink: "https://museumofpoliticalcorruption.org/conkling-platt-machine/"
                 },
                 {
                     machineName: "The Barnes Machine",
@@ -59,7 +66,7 @@
                     machineName: "The Corning-O’Connell Machine",
                     machineTime: "1921 - 1983 (and beyond)",
                     machineDescription: "Known for its ability to deliver services and support to constituents in exchange for political loyalty, the Corning-O'Connell political machine played a significant role in shaping Albany's political landscape during the 20th century.",
-                    machineLearnMoreLink: ""
+                    machineLearnMoreLink: "https://museumofpoliticalcorruption.org/corning-oconnell-machine/"
                 }
             ]
 
@@ -106,31 +113,15 @@
                         </div>
                     </div>
 
-                    <p className="subheading">The Political Machines of Albany’s Past</p>
-
-                    {politicalMachines.map((politicalMachine) => {
-                        return <PoliticalMachineCard machineName={politicalMachine.machineName} />
-                    })}
-
-                    <div>
-                        <p className="machine-name">The Roscoe Conkling-Tom Platt- Chester A. Arthur Republican Machine</p>
-                        <p className="machine-time">Late 1800s/early 1900s</p>
-                        <p className="machine-description">The State-wide NY Republican machine under Senators Roscoe Conkling and Tom Platt ruled state politics in New York and Albany for almost 30 years, using patronage and strong-arm tactics to muscle its will.</p>
+                    <div className="political-machines-of-albanys-past-section">
+                        <p className="subheading">The Political Machines of Albany’s Past</p>
+                        <div className="political-machine-cards">
+                            {politicalMachines.map((politicalMachine) => {
+                                const { machineName, machineTime, machineDescription, machineLearnMoreLink } = politicalMachine;
+                                return <PoliticalMachineCard machineName={machineName} machineTime={machineTime} machineDescription={machineDescription} machineLearnMoreLink={machineLearnMoreLink} />
+                            })}
+                        </div>
                     </div>
-
-                    <div>
-                        <p className="machine-name">The Barnes Machine </p>
-                        <p className="machine-time">1894-1921</p>
-                        <p className="machine-description">William Barnes Jr. (1866 – 1930) was the owner and publisher of the Albany Evening Journal.  Barnes’ Republican political machine had a thirty-year reign over Albany politics from 1891-1921.  Like many political machines of the time, the Barnes machine was involved in distributing government jobs and contracts in exchange for political loyalty and support. </p>
-                    </div>
-
-                    <div>
-                        <p className="machine-name">The Corning-O’Connell Machine</p>
-                        <p className="machine-time">1921 - 1983 (and beyond)</p>
-                        <p className="machine-description">Known for its ability to deliver services and support to constituents in exchange for political loyalty, the Corning-O'Connell political machine played a significant role in shaping Albany's political landscape during the 20th century.</p>
-                    </div>
-
-                    <h1>Under Construction: The Political Machines of Albany’s Past</h1>
 
                 </>)
         }

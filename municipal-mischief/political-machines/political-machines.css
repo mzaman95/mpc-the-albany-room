@@ -103,3 +103,57 @@
   color: #202020;
   padding: 40px !important;
 }
+
+/* Political Machine Card */
+.political-machines-of-albanys-past-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.political-machine-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 75px;
+}
+
+.political-machine-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.political-machine-card-row-1 {
+  background-color: #efe0f6;
+  color: #9933cc;
+  padding: 20px;
+  width: calc(33.3333% - 15px);
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.machine-time {
+  font-family: "Gotham Medium";
+  font-size: 30px;
+}
+
+.political-machine-card-row-2 {
+  background-color: #f0f0f0;
+  color: #202020;
+  font-family: "Gotham Book";
+  font-size: 16px;
+  padding: 20px;
+  width: calc(66.6666% - 15px);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.machine-name {
+  font-family: "Gotham Medium";
+  font-size: 20px;
+}
+
+.machine-description {
+  font-family: "Gotham Book";
+  font-size: 16px;
+}
