@@ -157,3 +157,36 @@
   font-family: "Gotham Book";
   font-size: 16px;
 }
+
+.learn-more {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 16px;
+  color: #9933cc;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  color: #b758e7;
+  text-decoration: none;
+}
+
+.learn-more:focus {
+  outline: 1px dotted #9933cc;
+}
+
+.learn-more .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+  transform: translateX(0px);
+}
+
+.learn-more:hover .icon {
+  transform: translateX(10px);
+}
