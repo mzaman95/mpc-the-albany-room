@@ -138,6 +138,39 @@
                 }
             ]
 
+            const MachinePartsHotspots = (props) => {
+                const { machinePart } = props
+                const { id, placement, name, description } = machinePart
+                const dataBsTarget = "#" + id
+
+                return (
+                    <>
+                        <a className="hotspot" data-bs-target={dataBsTarget} data-bs-toggle="modal" style={placement}>
+                            <div className="hotspot-outer-circle"></div>
+                            <div className="hotspot-inner-circle"></div>
+                        </a>
+                        <div className="modal" tabIndex="-1" id={id}>
+                            <div className="modal-dialog">
+                                <div className="modal-content text-center" style={{ borderRadius: "16px", border: "none" }}>
+                                    <div className="modal-header" style={{ borderTopLeftRadius: "16px", borderTopRightRadius: "16px" }}>
+                                        <h3 className="modal-title">{name}</h3>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                        <p className="machine-part-details"><b>{description}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </>
+                )
+            }
+
+            const machinePartsHotspots = machineParts.map((machinePart, index) => {
+                return <MachinePartsHotspots machinePart={machinePart} key={index} />
+            })
+
             return (
                 <>
                     <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
@@ -159,7 +192,7 @@
                     <div className="political-machine-gif-section">
                         <div className="hotspots">
                             <img className="political-machine-gif" src="https://museumofpoliticalcorruption.org/wp-content/uploads/2024/01/machinery.gif" alt="Political Machine Gif" />
-                            {machineParts}
+                            {machinePartsHotspots}
                         </div>
                     </div>
 
