@@ -81,6 +81,18 @@
                 }
             ]
 
+            const machineParts = [
+                {
+                    "id": "H1",
+                    "name": "",
+                    "placement": {
+                        "left": "%",
+                        "top": "%"
+                    },
+                    "description": "",
+                },
+            ]
+
             return (
                 <>
                     <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
@@ -99,7 +111,12 @@
 
                     <p className="text"><b>How does a well-oiled Political Machine work and how does it keep on running? Click on the “Machine parts” to find out.</b></p>
 
-                    <h1>Under Construction: Clickable Machine Parts</h1>
+                    <div className="political-machine-gif-section">
+                        <div className="hotspots">
+                            <img className="political-machine-gif" src="https://museumofpoliticalcorruption.org/wp-content/uploads/2024/01/machinery.gif" alt="Political Machine Gif" />
+                            {machineParts}
+                        </div>
+                    </div>
 
                     <p className="subheading">Political Machine Organizational Flow Chart</p>
                     <p className="text">Albany’s  political machine had a very specific, hierarchical structure, which included hundreds of Committeemen at the bottom.  Above the Committeemen were the Ward Leaders.</p>
