@@ -208,3 +208,54 @@
   height: auto;
   display: block;
 }
+
+@keyframes expand-hotspot {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  color: #9933cc;
+  font-size: 18px;
+}
+
+.hotspot-inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9933cc;
+  padding: 10px;
+}
+
+.hotspot-outer-circle {
+  animation: expand-hotspot 2s infinite;
+  width: 20px;
+  height: 20px;
+  background-color: #9933cc;
+  padding: 4px;
+}
+
+.hotspot-inner-circle,
+.hotspot-outer-circle {
+  content: "";
+  display: inline-block;
+  box-sizing: content-box;
+  border-radius: 50%;
+}
+
+.machine-part-modal {
+  font-family: "Gotham";
+  border-radius: 16px !important;
+}

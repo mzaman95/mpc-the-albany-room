@@ -23,14 +23,9 @@
             const [modalTitle, setModalTitle] = useState('')
             const [modalDescription, setModalDescription] = useState('')
 
-            const handleWardLeaderClick = () => {
-                setModalTitle("Ward Leader")
-                setModalDescription('Albany is divided into multiple Wards (legislative districts). Each district elected a city resident to become a Ward leader. Ward leaders  served as the legislative branch of Albany’s government.')
-            }
-
-            const handleCommitteemenClick = () => {
-                setModalTitle("Committeemen")
-                setModalDescription('Committeemen were members of the Albany County Democratic Committee (thus the name of their position). Voters knew that if they wanted the City to do something for them or their neighborhood, the way to get it done was to call your Committeeman.  No one considered calling the City employees in the appropriate department which would handle the request.  ')
+            const handleModalDataUpdate = (title, description) => {
+                setModalTitle(title)
+                setModalDescription(description)
             }
 
             const PoliticalMachineCard = (props) => {
@@ -86,8 +81,8 @@
                     "id": "H1",
                     "name": "Hierarchy",
                     "placement": {
-                        "left": "%",
-                        "top": "%"
+                        "left": "60%",
+                        "top": "30%"
                     },
                     "description": "Political machines have a hierarchical structure, with a leader at the top, followed by various levels of subordinates.",
                 },
@@ -145,24 +140,10 @@
 
                 return (
                     <>
-                        <a className="hotspot" data-bs-target={dataBsTarget} data-bs-toggle="modal" style={placement}>
+                        <button type="button" data-toggle="modal" data-target="#orgModal" className="hotspot" style={placement} onClick={() => handleModalDataUpdate(name, description)}>
                             <div className="hotspot-outer-circle"></div>
                             <div className="hotspot-inner-circle"></div>
-                        </a>
-                        <div className="modal" tabIndex="-1" id={id}>
-                            <div className="modal-dialog">
-                                <div className="modal-content text-center" style={{ borderRadius: "16px", border: "none" }}>
-                                    <div className="modal-header" style={{ borderTopLeftRadius: "16px", borderTopRightRadius: "16px" }}>
-                                        <h3 className="modal-title">{name}</h3>
-                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div className="modal-body">
-                                        <p className="machine-part-details"><b>{description}</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        </button>
                     </>
                 )
             }
@@ -200,8 +181,8 @@
                     <p className="text">Albany’s  political machine had a very specific, hierarchical structure, which included hundreds of Committeemen at the bottom.  Above the Committeemen were the Ward Leaders.</p>
                     <p className="text"><b>Select a role to learn more about it.</b></p>
                     <div className="organization-flow-chart-section">
-                        <button type="button" data-toggle="modal" data-target="#orgModal" className="ward-leader-button" onClick={() => handleWardLeaderClick()}>Ward Leader</button>
-                        <button type="button" data-toggle="modal" data-target="#orgModal" className="committeemen-button" onClick={() => handleCommitteemenClick()}>Committeemen</button>
+                        <button type="button" data-toggle="modal" data-target="#orgModal" className="ward-leader-button" onClick={() => handleModalDataUpdate("Ward Leader", "Albany is divided into multiple Wards (legislative districts). Each district elected a city resident to become a Ward leader. Ward leaders  served as the legislative branch of Albany’s government.")}>Ward Leader</button>
+                        <button type="button" data-toggle="modal" data-target="#orgModal" className="committeemen-button" onClick={() => handleCommitteemenClick("Committeemen", "Committeemen were members of the Albany County Democratic Committee (thus the name of their position). Voters knew that if they wanted the City to do something for them or their neighborhood, the way to get it done was to call your Committeeman.  No one considered calling the City employees in the appropriate department which would handle the request.")}>Committeemen</button>
                     </div>
                     <div className="modal fade" id="orgModal" tabindex="-1" role="dialog" aria-labelledby="orgModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
