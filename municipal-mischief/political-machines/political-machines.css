@@ -228,6 +228,12 @@
   justify-content: center;
   color: #9933cc;
   font-size: 18px;
+  background-color: transparent;
+}
+
+.hotspot:hover,
+.hotspot:active {
+  background-color: transparent;
 }
 
 .hotspot-inner-circle {
