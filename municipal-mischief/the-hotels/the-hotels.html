@@ -55,7 +55,7 @@
                         {
                             name: "Jay Gould",
                             image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/jay-gould.png",
-                            description: "On March 1, 1868, the famous “Robber Baron” Jay Gould was arrested by the sheriff for contempt of court but paid half million on bail. He spent the week in Parlor 57 at the hotel handing out money, cigars, and champagne to NYS lawmakers trying to get a bill passed."
+                            description: "In 1868, he was arrested for contempt of court but paid half million on bail. He spent the week at the hotel handing out money, cigars, and champagne to NYS lawmakers trying to get a bill passed."
                         },
                         {
                             name: "Abraham Lincoln",
@@ -73,12 +73,12 @@
                         {
                             name: "Jack “Legs” Diamond",
                             image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/legs-diamond.jpeg",
-                            description: "He was a notorious gangster. On December 17, 1931, Diamond was killed in a rooming house at 67 Dove St. Some historians believe that Albany Boss Dan O’Connell ordered the hit and was carried out by the Albany Police Department. "
+                            description: "A notorious gangster, he was killed in a rooming house at 67 Dove St. in 1931. Some historians believe that Albany Boss Dan O’Connell ordered the hit."
                         },
                         {
                             name: "Nellie Bly",
                             image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/nelly-bly.png",
-                            description: "The hotel became famous when Nellie Bly (Elizabeth Mary Jane Cochran) a reporter for the New York World in 1888 exposed the corrupt lobbying practice of Edward R. Phelps, the “King of the Lobby” at the NYS Assembly. She met with Phelps at his hotel room and ofﬁce in March 1888 pretending to want him help kill a bill that would affect her ‘husband’s’ business. The expose was published on April 1, 1888, and also exposed many Assembly members that were bribable. Phelps’ partner J. F. Chesbrough was also implicated. Phelps had been implicated previously in 1881 when NYS Senator Loren B. “lo” Sessions tried to bribe an assemblyman with $200 to vote for Session’s candidate. "
+                            description: "A reporter for the New York World, she met with Edward R. Phelps, the “King of the Lobby” here to expose him for bribery. "
                         },
                         {
                             name: "Louis Armstrong",
@@ -124,7 +124,7 @@
                         {
                             name: "William Randolph Hearst",
                             image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/william-hearst.png",
-                            description: "It was at the Ten Eyck that William Randolph Hearst left the Democratic Party and took leadership in the Independence League at a rally on March 6, 1907. Hearst was formerly a Democratic representative in the 11th NY District and had an unsuccessful run at being Governor, without the support of the Democrats. He got his revenge by buying the Knickerbocker News in 1960 and going after the Albany Political Machine."
+                            description: "A former Democratic representative, he decided to leave the Party and join the Independence League while at Ten Eyck. "
                         }
                     ]
                     break;
@@ -134,11 +134,6 @@
                     HOTEL_LOCATION = "144 State St. - Currently Renaissance Albany Hotel"
                     HOTEL_KNOWN_FOR = "The DeWitt Clinton was known as the “Democrat’s Hotel” and was the center for state, county, and local Democrats who made deals in the famous Crystal Ballroom. Just minutes from the Capitol, lobbyists & lawmakers would mingle in the lobby with drinks in hand. Candidates were often voted on by party leaders here and it was the home of many lobbyists. Governors spoke here, meetings were held in back rooms, and at the bar were often the scene of local, state, and national agreements being made. "
                     HOTEL_VIP_GUESTS = [
-                        {
-                            name: "Gov. Al Smith",
-                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/al-smith.png",
-                            description: "He was the ﬁrst to stay when it opened in 1927 (though a stray cat ofﬁcially beat him). "
-                        },
                         {
                             name: "Dan O’Connell",
                             image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dan-connell.png",
@@ -262,7 +257,7 @@
                                 </div>
                             </div>
                             {currentSelection && <><p className="hotel-title">VIP Guests</p> <p className="directions"><b>Hover over a guest to learn more about them.</b></p></>}
-                            <div className="container d-flex align-items-center justify-content-center flex-wrap">
+                            <div className="container">
                                 {
                                     HOTEL_VIP_GUESTS.map((guest) => {
                                         return (

@@ -164,7 +164,6 @@ GuestCards
 */
 .container {
   transform-style: preserve-3d;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,5 +250,5 @@ GuestCards
 
 .guest-description {
   font-family: "Gotham Book", sans-serif;
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
