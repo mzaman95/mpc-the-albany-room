@@ -26,12 +26,12 @@ Breadcrumbs
 /* Page Title */
 .page-title {
   margin-left: 75px !important;
-  font-family: "Covered By Your Grace", sans-serif;
-  font-weight: bold !important;
-  font-size: 68px !important;
-  text-transform: uppercase !important;
   color: #202020;
-  margin-bottom: 20px !important;
+  font-family: "Gotham Medium", sans-serif;
+  font-weight: bold !important;
+  font-size: 60px !important;
+  margin-top: 40px !important;
+  margin-bottom: 0px !important;
 }
 
 /* Story */
