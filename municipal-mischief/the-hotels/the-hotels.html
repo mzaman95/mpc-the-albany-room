@@ -256,29 +256,31 @@
                                     <p>{HOTEL_KNOWN_FOR}</p>
                                 </div>
                             </div>
-                            {currentSelection && <><p className="sub-title">VIP Guests</p> <p className="directions"><b>Hover over a guest to learn more about them.</b></p></>}
-                            <div className="container">
-                                {
-                                    HOTEL_VIP_GUESTS.map((guest) => {
-                                        return (
-                                            <>
-                                                <div className="box">
-                                                    <div className="body">
-                                                        <div className="imgContainer">
-                                                            <img src={guest.image}
-                                                                alt={guest.name} />
-                                                        </div>
-                                                        <div className="guest-details content d-flex flex-column align-items-center justify-content-center">
-                                                            <p className="text-white fs-5 guest-name">{guest.name}</p>
-                                                            <p className="fs-6 text-white guest-description">{guest.description}</p>
+                            {currentSelection && <div class="vip-section">
+                                <p className="sub-title">VIP Guests</p> <p className="vip-directions"><b>Hover over a guest to learn more about them.</b></p>
+                                <div className="container">
+                                    {
+                                        HOTEL_VIP_GUESTS.map((guest) => {
+                                            return (
+                                                <>
+                                                    <div className="box">
+                                                        <div className="body">
+                                                            <div className="imgContainer">
+                                                                <img src={guest.image}
+                                                                    alt={guest.name} />
+                                                            </div>
+                                                            <div className="guest-details content d-flex flex-column align-items-center justify-content-center">
+                                                                <p className="text-white fs-5 guest-name">{guest.name}</p>
+                                                                <p className="fs-6 text-white guest-description">{guest.description}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </>
-                                        )
-                                    })
-                                }
-                            </div>
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>}
                         </div>
                     </div>
                 </>)
