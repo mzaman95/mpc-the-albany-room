@@ -81,18 +81,21 @@
 
 .card {
   border-radius: 16px !important;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.55);
 }
 
-.card-title {
-  font-family: "Covered By Your Grace", sans-serif;
+.mm-card-title {
+  font-family: "Gotham Medium", sans-serif !important;
+  font-size: 24px !important;
+  margin-top: 15px !important;
+  margin-bottom: 10px !important;
+  text-transform: none !important;
+}
+
+.mm-card-text {
+  font-family: "Gotham Book", sans-serif !important;
   font-weight: bold !important;
-  font-size: 26px !important;
-  text-transform: uppercase !important;
-}
-
-.card-text {
-  font-family: "Gotham Medium", sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .category-link:hover {
@@ -102,6 +105,7 @@
 .card {
   color: #202020;
   background-color: white;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.55) !important;
 }
 
 .card:hover {
