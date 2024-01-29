@@ -203,7 +203,12 @@
                                     <br />
                                     <p className="location-details">{address}</p>
                                     <p className="location-details"><b>{description}</b></p>
-                                    <p className="location-details">Learn more about it in <a className="location-to-page-link" href={linkSectionURL}>{linkSectionName}</a>.</p>
+                                    <p className="location-details">Learn more about it in{' '}
+                                        <a href={linkSectionURL}
+                                            className="location-to-page-link">
+                                            {linkSectionName}
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
