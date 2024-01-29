@@ -82,15 +82,21 @@
 }
 
 .modal-header {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
   background-color: #9933cc;
   color: white;
 }
 
+.modal-content {
+  border-radius: 16px !important;
+}
+
 .modal-title {
   color: white !important;
-  font-family: "Covered By Your Grace", sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 0px !important;
+  font-family: "Gotham Medium", sans-serif;
+  margin-bottom: -10px !important;
+  margin-top: 10px !important;
 }
 
 .x-button {
@@ -101,7 +107,10 @@
   font-family: "Gotham Book", sans-serif;
   font-size: 16px;
   color: #202020;
-  padding: 40px !important;
+}
+
+.modal-body p {
+  margin-bottom: 0px !important;
 }
 
 /* Political Machine Card */

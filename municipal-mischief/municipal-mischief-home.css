@@ -190,9 +190,9 @@
 
 .modal-title {
   color: white !important;
-  font-family: "Covered By Your Grace", sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 0px !important;
+  font-family: "Gotham Medium", sans-serif;
+  margin-bottom: -10px !important;
+  margin-top: 10px !important;
 }
 
 .modal-image {
