@@ -12,7 +12,7 @@ Breadcrumbs
 .breadcrumb-item {
   font-family: "Gotham Medium", sans-serif;
   font-size: 16px;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .inactive-link {
