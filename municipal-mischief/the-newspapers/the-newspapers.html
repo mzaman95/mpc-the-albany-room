@@ -136,7 +136,6 @@
                 } else {
                     setShowScore(true)
                 }
-                console.log("Next question...")
             }
 
             const handleRetake = () => {
@@ -200,7 +199,7 @@
                                             <p className="answer-description">{questions[currentQuestion].answerDescription}</p>
                                             <div className="action-button-group">
                                                 <button type="button" data-toggle="modal" data-target="#exampleModal" className="learn-more-button" onClick={() => handleLearnMore()}>Learn More</button>
-                                                <button className="next-button" onClick={() => handleNextQuestion()}>Next Question</button>
+                                                <button className="next-button" onClick={() => handleNextQuestion()}>{currentQuestion == 2 ? `See Results` : `Next Question`}</button>
                                             </div>
                                         </div>
                                         <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
