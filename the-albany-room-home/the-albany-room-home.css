@@ -1,3 +1,38 @@
+.page-title {
+  color: white;
+  font-family: "Gotham Medium", Sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px !important;
+}
+
+.teaser-text {
+  color: white;
+  font-family: "Gotham Medium", Sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px !important;
+}
+
+.introduction-text {
+  color: white;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.directions {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  margin-bottom: 40px !important;
+  text-align: center;
+  font-weight: bold;
+}
+
 .card-title {
   font-family: "Gotham Medium", sans-serif;
   font-size: 24px;

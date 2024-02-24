@@ -38,7 +38,7 @@
             const { name, description, link } = props
             return (
 
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-md-6 mb-3">
                     <a href={link} className="category-link">
                         <div class="card h-100" style={{ borderRadius: "16px" }}>
                             <div class="card-body text-center">
@@ -57,9 +57,17 @@
                 const { name, link, description } = corruptionCategory
                 return <CorruptionCategory name={name} link={link} description={description} />
             })
-            return (<div className="row" style={{ maxWidth: "60%", margin: "auto" }}>
-                {categoriesList}
-            </div>);
+            return (
+                <>
+                    <p className="page-title">The Albany Room</p>
+                    <p className="teaser-text">Explore Albany's rich history of political corruption and reform.</p>
+                    <p className="introduction-text">Chartered in 1686,  Albany, NY is one of the United States’ oldest cities. Situated on the Hudson River’s west bank,  approximately 150 miles north of Manhattan,  Albany remains a significant cultural and educational center.   Its rich history of corruption is a confluence of the local “machine politics” found in many urban centers in the 19th and 20th centuries combined with the river of money that flows through Albany as the Capital of New York State.   Where there is money, there is power and the abuse of power.</p>
+                    <p className="directions">Select Capital Corruption or Municipal Mischief to learn more about Albany’s fascinating political history.</p>
+
+                    <div className="row" style={{ maxWidth: "90%", margin: "auto" }}>
+                        {categoriesList}
+                    </div>
+                </>);
         };
 
         ReactDOM.render(<TheAlbanyRoomHomePage />, document.getElementById("root"));
