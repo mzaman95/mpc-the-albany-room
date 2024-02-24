@@ -2,10 +2,10 @@
 .albany-room-breadcrumbs {
   margin-left: 35px !important;
 }
-@media (max-width: 450px) { 
+@media (max-width: 450px) {
   .albany-room-breadcrumbs {
-  margin-left: 10px !important;
-}
+    margin-left: 10px !important;
+  }
 }
 
 @media (max-width: 450px) {
