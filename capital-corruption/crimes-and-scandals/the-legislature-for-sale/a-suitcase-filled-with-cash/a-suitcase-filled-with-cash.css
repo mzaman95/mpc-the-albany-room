@@ -60,6 +60,11 @@ Breadcrumbs
   margin-left: 75px !important;
   padding-bottom: 80px;
 }
+@media (max-width: 450px) {
+  .story {
+    margin-left: 0px !important;
+  }
+}
 
 /* Img Div */
 .img-div {
