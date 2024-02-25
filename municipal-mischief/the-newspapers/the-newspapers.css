@@ -2,9 +2,19 @@
 .albany-room-breadcrumbs {
   margin-left: 35px !important;
 }
+@media (max-width: 450px) {
+  .albany-room-breadcrumbs {
+    margin-left: 10px !important;
+  }
+}
 
 .breadcrumb {
   padding: 0px !important;
+}
+@media (max-width: 450px) {
+  .breadcrumb {
+    margin-left: 0px !important;
+  }
 }
 
 .breadcrumb-item {
@@ -32,6 +42,13 @@
   margin-top: 40px !important;
   margin-bottom: 0px !important;
 }
+@media (max-width: 450px) {
+  .page-title {
+    margin-left: 0px !important;
+    font-size: 40px !important;
+    text-align: center;
+  }
+}
 
 /* Intro Text */
 .introduction-text {
@@ -39,6 +56,12 @@
   font-size: 16px !important;
   color: #202020;
   margin-left: 75px !important;
+}
+@media (max-width: 450px) {
+  .introduction-text {
+    margin-left: 0px !important;
+    text-align: center;
+  }
 }
 
 /* Quiz Area */
@@ -54,6 +77,15 @@
   margin-left: 75px !important;
   margin-bottom: 80px !important;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 450px) {
+  .quiz {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    padding-top: 10px !important;
+    padding-bottom: 60px !important;
+    margin-left: 0px !important;
+  }
 }
 
 .score-section {
@@ -104,6 +136,11 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
+}
+@media (max-width: 450px) {
+  .answer-section {
+    flex-direction: column;
+  }
 }
 
 .answer-choice {
