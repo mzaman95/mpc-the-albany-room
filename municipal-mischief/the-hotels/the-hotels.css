@@ -2,9 +2,19 @@
 .albany-room-breadcrumbs {
   margin-left: 35px !important;
 }
+@media (max-width: 450px) {
+  .albany-room-breadcrumbs {
+    margin-left: 10px !important;
+  }
+}
 
 .breadcrumb {
   padding: 0px !important;
+}
+@media (max-width: 450px) {
+  .breadcrumb {
+    margin-left: 0px !important;
+  }
 }
 
 .breadcrumb-item {
@@ -32,6 +42,13 @@
   margin-top: 40px !important;
   margin-bottom: 0px !important;
 }
+@media (max-width: 450px) {
+  .page-title {
+    margin-left: 0px !important;
+    font-size: 40px !important;
+    text-align: center;
+  }
+}
 
 /* Intro Text */
 .introduction-text {
@@ -39,6 +56,13 @@
   font-size: 16px !important;
   color: #202020;
   margin-left: 75px !important;
+  text-align: left;
+}
+@media (max-width: 450px) {
+  .introduction-text {
+    margin-left: 0px !important;
+    text-align: center;
+  }
 }
 
 /* Toggle and Views Section */
@@ -51,6 +75,13 @@
   padding-bottom: 60px !important;
   margin-left: 75px !important;
   margin-bottom: 80px !important;
+}
+@media (max-width: 450px) {
+  .toggle-and-views {
+    text-align: center;
+    margin-left: 0px !important;
+    padding: 0px !important;
+  }
 }
 
 /*
@@ -137,12 +168,23 @@ Content
   font-family: "Gotham Medium" !important;
   font-size: 30px !important;
 }
+@media (max-width: 450px) {
+  .hotel-title {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+  }
+}
 
 .hotel-content {
   padding: 40px;
   display: flex;
   flex-direction: row;
   gap: 40px;
+}
+@media (max-width: 450px) {
+  .hotel-content {
+    flex-direction: column;
+  }
 }
 
 .hotel-details {
@@ -152,6 +194,12 @@ Content
 .hotel-image {
   border-radius: 16px !important;
   max-height: 400px;
+  width: 50% !important;
+}
+@media (max-width: 450px) {
+  .hotel-image {
+    width: 100% !important;
+  }
 }
 
 .teaser-text {
@@ -170,6 +218,12 @@ GuestCards
   align-items: center;
   justify-content: center;
   border-radius: 16px !important;
+}
+@media (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .container .box {
@@ -273,6 +327,14 @@ GuestCards
   margin-top: 60px !important;
   margin-left: 75px !important;
   margin-bottom: 80px !important;
+}
+@media (max-width: 450px) {
+  .vip-section {
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+  }
 }
 
 .vip-directions {
