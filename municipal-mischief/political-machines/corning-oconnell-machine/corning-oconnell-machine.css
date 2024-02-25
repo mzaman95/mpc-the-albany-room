@@ -4,9 +4,19 @@ Breadcrumbs
 .albany-room-breadcrumbs {
   margin-left: 35px !important;
 }
+@media (max-width: 450px) {
+  .albany-room-breadcrumbs {
+    margin-left: 10px !important;
+  }
+}
 
 .breadcrumb {
   padding: 0px !important;
+}
+@media (max-width: 450px) {
+  .breadcrumb {
+    margin-left: 0px !important;
+  }
 }
 
 .breadcrumb-item {
@@ -34,6 +44,13 @@ Breadcrumbs
   margin-top: 40px !important;
   margin-bottom: 0px !important;
 }
+@media (max-width: 450px) {
+  .page-title {
+    margin-left: 0px !important;
+    font-size: 40px !important;
+    text-align: center;
+  }
+}
 
 /* Story */
 .story {
@@ -42,6 +59,11 @@ Breadcrumbs
   color: #202020;
   margin-left: 75px !important;
   padding-bottom: 80px;
+}
+@media (max-width: 450px) {
+  .story {
+    margin-left: 0px !important;
+  }
 }
 
 .section-heading {
