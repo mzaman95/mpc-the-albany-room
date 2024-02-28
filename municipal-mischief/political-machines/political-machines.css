@@ -67,7 +67,7 @@
   margin-top: 20px !important;
   font-family: "Gotham Book", sans-serif;
   font-size: 16px !important;
-  color: #202020;
+  color: white;
   text-align: center;
 }
 @media (max-width: 450px) {
@@ -78,7 +78,7 @@
 
 /* Toggle and Views Section */
 .toggle-and-views {
-  background-color: #efe0f6;
+  background-color: #202020;
   border-radius: 16px;
   padding-right: 40px !important;
   padding-left: 40px !important;
@@ -341,15 +341,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #9933cc;
-  padding: 10px;
+  background-color: #efe0f6;
+  padding: 14px;
 }
 
 .hotspot-outer-circle {
   animation: expand-hotspot 2s infinite;
-  width: 20px;
-  height: 20px;
-  background-color: #9933cc;
+  width: 24px;
+  height: 24px;
+  background-color: white;
   padding: 4px;
 }
 
