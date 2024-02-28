@@ -63,6 +63,38 @@
   }
 }
 
+.directions {
+  margin-top: 20px !important;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px !important;
+  color: #202020;
+  text-align: center;
+}
+@media (max-width: 450px) {
+  .directions {
+    text-align: left;
+  }
+}
+
+/* Toggle and Views Section */
+.toggle-and-views {
+  background-color: #efe0f6;
+  border-radius: 16px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  padding-top: 20px !important;
+  padding-bottom: 60px !important;
+  margin-left: 75px !important;
+  margin-bottom: 80px !important;
+}
+@media (max-width: 450px) {
+  .toggle-and-views {
+    background-color: transparent;
+    padding: 0px !important;
+    margin-left: 0px !important;
+  }
+}
+
 .subheading {
   font-family: "Gotham Book", sans-serif;
   font-size: 30px !important;
@@ -264,18 +296,6 @@
 
 .learn-more:hover .icon {
   transform: translateX(10px);
-}
-
-/* Political Machine Gif Section */
-.political-machine-gif-section {
-  margin-left: 75px !important;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-@media (max-width: 450px) {
-  .political-machine-gif-section {
-    margin-left: 0px !important;
-  }
 }
 
 .hotspots {
