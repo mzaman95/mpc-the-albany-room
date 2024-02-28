@@ -31,7 +31,12 @@
 
 /* Toggle and Views Section */
 .toggle-and-views {
-  background-color: #f0f0f0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(32, 32, 32, 0.6),
+      rgba(153, 51, 204, 0.8)
+    ),
+    url("https://museumofpoliticalcorruption.org/wp-content/uploads/2024/02/money-purple.gif");
   border-radius: 16px;
   padding-right: 40px !important;
   padding-left: 40px !important;
@@ -110,7 +115,7 @@
   font-family: "Gotham Book", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #202020;
+  color: white;
   margin-bottom: 20px !important;
 }
 
@@ -140,7 +145,7 @@
 
 .card:hover {
   color: white !important;
-  background-color: #9933cc !important;
+  background-color: #202020 !important;
 }
 
 /* Map View */
