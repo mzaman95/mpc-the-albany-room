@@ -45,12 +45,12 @@
   margin-left: 75px !important;
   margin-bottom: 80px !important;
 }
-
 @media (max-width: 450px) {
   .toggle-and-views {
     text-align: center;
     margin-left: 0px !important;
     padding: 0px !important;
+    background-image: none;
     background-color: transparent;
   }
 }
@@ -117,6 +117,11 @@
   line-height: 24px;
   color: white;
   margin-bottom: 20px !important;
+}
+@media (max-width: 450px) {
+  .directions {
+    color: #202020;
+  }
 }
 
 .card-title {
