@@ -110,7 +110,7 @@ Header Section
 Icons
 */
 .icon-card-group {
-  max-width: 60%;
+  max-width: 80%;
   flex-direction: row !important;
   cursor: pointer;
 }
