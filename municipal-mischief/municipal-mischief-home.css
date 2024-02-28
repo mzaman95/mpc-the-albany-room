@@ -197,15 +197,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #9933cc;
-  padding: 10px;
+  background-color: #efe0f6;
+  padding: 14px;
 }
 
 .hotspot-outer-circle {
   animation: expand-hotspot 2s infinite;
-  width: 20px;
-  height: 20px;
-  background-color: #9933cc;
+  width: 24px;
+  height: 24px;
+  background-color: white;
   padding: 4px;
 }
 
