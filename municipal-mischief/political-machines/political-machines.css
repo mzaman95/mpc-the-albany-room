@@ -67,7 +67,7 @@
   margin-top: 20px !important;
   font-family: "Gotham Book", sans-serif;
   font-size: 16px !important;
-  color: white;
+  color: #202020;
   text-align: center;
 }
 @media (max-width: 450px) {
@@ -78,7 +78,7 @@
 
 /* Toggle and Views Section */
 .toggle-and-views {
-  background-color: #202020;
+  background-color: #f0f0f0;
   border-radius: 16px;
   padding-right: 40px !important;
   padding-left: 40px !important;
@@ -341,7 +341,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #efe0f6;
+  background-color: lightgreen;
   padding: 14px;
 }
 
