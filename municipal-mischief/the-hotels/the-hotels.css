@@ -167,11 +167,22 @@ Content
   color: white !important;
   font-family: "Gotham Medium" !important;
   font-size: 30px !important;
+  text-align: left !important;
 }
 @media (max-width: 450px) {
   .hotel-title {
     margin-top: 0px !important;
     margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+}
+
+.hotel-known-for {
+  text-align: left !important;
+}
+@media (max-width: 450px) {
+  .hotel-known-for {
+    text-align: center !important;
   }
 }
 
