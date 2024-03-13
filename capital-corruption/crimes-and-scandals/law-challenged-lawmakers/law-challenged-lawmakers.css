@@ -100,6 +100,10 @@
 }
 
 /* Cards */
+.card-body {
+  background-color: #efe0f6;
+}
+
 .lawmaker-cards {
   padding-top: 40px;
   padding-bottom: 80px;
