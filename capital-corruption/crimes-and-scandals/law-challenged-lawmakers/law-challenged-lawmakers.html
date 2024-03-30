@@ -18,13 +18,14 @@
     <script type="text/babel" data-presets="react,stage-3">
 
         const LawmakerCard = (props) => {
-            const { name, subtitle, description } = props
+            const { name, subtitle, description, date } = props
             return (
                 <div className="card lawmaker-card">
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">{subtitle}</h6>
                         <p className="card-text">{description}</p>
+                        <p className="card-date text-muted">{date}</p>
                     </div>
                 </div>
             )
@@ -56,7 +57,7 @@
             }
 
             const lawmakersList = lawmakers.map((lawmaker, index) => {
-                return <LawmakerCard name={lawmaker.name} subtitle={lawmaker.subtitle} description={lawmaker.description} />
+                return <LawmakerCard name={lawmaker.name} subtitle={lawmaker.subtitle} description={lawmaker.description} date={lawmaker.date} />
             })
 
             return (
