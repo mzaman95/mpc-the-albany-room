@@ -50,14 +50,17 @@
 
 
             let COMMITTEE_TITLE = ""
+            let COMMITTEE_IMG = ""
             let COMMITTEE_CONTENT = '';
             switch (currentSelection) {
                 case "com13":
                     COMMITTEE_TITLE = "The Committee of 13"
+                    COMMITTEE_IMG = "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/03/Committee-of-13-Marcus_T._Hun.png"
                     COMMITTEE_CONTENT = "The Committee of 13 was headquartered at 25 North Pearl Street.  It was a  good government group founded in 1881 by several Albany lawyers. The Committee investigated fraud and corruption in the city  and brought many changes and transparency into how the government works. "
                     break;
                 case "brothers":
                     COMMITTEE_TITLE = "The Brothers"
+                    COMMITTEE_IMG = ""
                     COMMITTEE_CONTENT = "The Brothers was a civil rights organization in Albany  in the 1960s who  advocated against employment discrimination, political corruption, and inequities in housing and health care."
                     break;
             }
@@ -118,6 +121,7 @@
                         {currentSelection && <div className="committee-card align-items-center justify-content-center">
                             <p className="committee-title">{COMMITTEE_TITLE}</p>
                             <p className="committee-details">{COMMITTEE_CONTENT}</p>
+                            {COMMITTEE_IMG && <div className="img-container"><img className="committee-img" src={COMMITTEE_IMG} /></div>}
                         </div>}
                     </div>
 
