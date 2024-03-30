@@ -54,22 +54,27 @@
 
 
             let COMMITTEE_TITLE = ""
+            let COMMITTEE_IMG = ""
             let COMMITTEE_CONTENT = '';
             switch (currentSelection) {
                 case "hofstadter":
                     COMMITTEE_TITLE = "The Hofstadter Commission"
+                    COMMITTEE_IMG = ""
                     COMMITTEE_CONTENT = "Also known as the Seabury investigations, a joint committee formed by the NYS Legislature on behalf of Governor Franklin D. Roosevelt to probe corruption in New York City. It led to the downfall of NYC Mayor Jimmy Walker, one of the last of the Tammany Hall politicians."
                     break;
                 case "moreland":
                     COMMITTEE_TITLE = "The Moreland Commission"
+                    COMMITTEE_IMG = "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/03/Moreland-Commission.jpg"
                     COMMITTEE_CONTENT = "The Commission to Investigate Public Corruption was created by New York governor Andrew Cuomo in July 2013 with the aim of investigating politicians and political organizations in New York for violations of state laws regulating elections, campaigns and political fundraising.  Cuomo disbanded the commission in March 2014.  There are suggestions that the commission was disbanded with work left to be done because its investigations were getting too close to the executive branch.  "
                     break;
                 case "jcope":
                     COMMITTEE_TITLE = "JCOPE (Joint Commission on Public Ethics)"
+                    COMMITTEE_IMG = "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/03/JCOPE.png"
                     COMMITTEE_CONTENT = "The Joint Commission on Public Ethics (JCOPE) was created in New York in 2011. It was established with the passage of the Public Integrity Reform Act of 2011, which was signed into law by then-Governor Andrew Cuomo.  JCOPE was formed to consolidate and oversee ethics enforcement in the state and was tasked with promoting transparency, integrity, and accountability in government, as well as enforcing ethics laws and regulations.  It came under criticism because it was controlled by the governor and because of the political way in which its members were selected.  "
                     break;
                 case "celig":
                     COMMITTEE_TITLE = "CELIG (Commission on Ethics and Lobbying in Government)"
+                    COMMITTEE_IMG = "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/03/CELIG.png"
                     COMMITTEE_CONTENT = "The Commission on Ethics and Lobbying in Government was created in 2022 to replace JCOPE.  According to its website, its mission is to oversee, regulate and ensure compliance with New York State’s ethics and lobbying laws. It has broad authority over Statewide elected officials, candidates for those offices, executive branch officers and employees, members of the Legislature and legislative branch employees and candidates, as well as certain political party chairs, and registered lobbyists and their clients. The Commission provides information, education, and advice regarding current ethics and lobbying laws and promotes compliance through training, guidance, disclosure, audits, investigations and enforcement proceedings. "
                     break;
             }
@@ -159,6 +164,7 @@
                         {currentSelection && <div className="committee-card align-items-center justify-content-center">
                             <p className="committee-title">{COMMITTEE_TITLE}</p>
                             <p className="committee-details">{COMMITTEE_CONTENT}</p>
+                            {COMMITTEE_IMG && <div className="img-container"><img className="committee-img" src={COMMITTEE_IMG} /></div>}
                         </div>}
                     </div>
 
