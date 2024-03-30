@@ -71,3 +71,12 @@ Breadcrumbs
   font-size: 30px !important;
   margin-bottom: 10px !important;
 }
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.beer-img {
+  border-radius: 16px !important;
+}
