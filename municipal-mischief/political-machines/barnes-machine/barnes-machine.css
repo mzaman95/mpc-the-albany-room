@@ -52,6 +52,23 @@ Breadcrumbs
   }
 }
 
+/* Image */
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.political-machine-img {
+  margin-left: 75px !important;
+  width: 40%;
+  border-radius: 16px !important;
+  margin-bottom: 40px !important;
+}
+@media (max-width: 450px) {
+  .political-machine-img {
+    margin-left: 0px !important;
+  }
+}
+
 /* Story */
 .story {
   font-family: "Gotham Book", sans-serif;
