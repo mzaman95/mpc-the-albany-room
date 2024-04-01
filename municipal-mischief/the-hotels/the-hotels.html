@@ -22,6 +22,113 @@
 
             const [currentSelection, setCurrentSelection] = useState("")
 
+            const hotels = [
+                {
+                    doorOneText: "Delavan",
+                    doorTwoText: "House",
+                    hotelName: "Delavan House",
+                    hotelLocation: "Previously located on East side Broadway between Columbia & Steuben; The hotel burned down on December 30, 1894 while around 20 politicians were staying here (they all escaped but 15 hotel workers perished).",
+                    hotelImage: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/delevan-house.png",
+                    hotelDescription: "This hotel has been a popular spot for lobbyists and politicians of both parties for over 40 years. It's famous for bribery and graft amongst its guests during the Tammany Hall era.",
+                    hotelGuests: [
+                        {
+                            name: "Jay Gould",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/jay-gould.png",
+                            description: "In 1868, he was arrested for contempt of court but paid half million on bail. He spent the week at the hotel handing out money, cigars, and champagne to NYS lawmakers trying to get a bill passed."
+                        },
+                        {
+                            name: "Abraham Lincoln",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/abe-lincoln.jpg",
+                            description: "He stayed here when he visited Albany in 1861."
+                        }]
+                },
+                {
+                    doorOneText: "Kenmore",
+                    doorTwoText: "Hotel",
+                    hotelName: "Kenmore Hotel",
+                    hotelLocation: "74 North Pearl St.",
+                    hotelImage: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/kenmore-hotel.jpg",
+                    hotelDescription: "Built by former slave Adam Blake the Kenmore was famous for political graft, its “Rain-Bo Room,” and as the hang out for the notorious gangster Jack “Legs” Diamond.",
+                    hotelGuests: [
+                        {
+                            name: "Jack “Legs” Diamond",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/legs-diamond.jpeg",
+                            description: "A notorious gangster, killed in a rooming house here. Some believe that Albany Boss Dan O’Connell ordered the hit."
+                        },
+                        {
+                            name: "Nellie Bly",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/nelly-bly.png",
+                            description: "A reporter for the New York World, she met with Edward R. Phelps, the “King of the Lobby” here to expose him for bribery. "
+                        },
+                        {
+                            name: "Louis Armstrong",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/louis-armstrong.png",
+                            description: "He performed at the hotel’s “Rain-Bo Room”. "
+                        },
+                        {
+                            name: "Frank Sinatra",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/frank-sinatra.png",
+                            description: "He performed at  the hotel’s “Rain-Bo Room”. "
+                        }
+                    ]
+                },
+                {
+                    doorOneText: "Stanwix",
+                    doorTwoText: "Hall",
+                    hotelName: "Stanwix Hall",
+                    hotelLocation: "SE corner of Broadway & Maiden Lane",
+                    hotelImage: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/stanwix-hall.png",
+                    hotelDescription: "The hotel became popular in 1878 with local and state legislators while lobbying for certain State ofﬁces. Albany County Democrats and the Anti Monopoly League held meetings here in the 1880s.",
+                    hotelGuests: [
+                        {
+                            name: "L. Harris Hiscock",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/l-harris-hiscock.png",
+                            description: "On the eve of June 4, 1868, while in the hotel’s main reception room, Physician George Cole shot to death L. Harris Hiscock. Hiscock, Speaker of the NYS Assembly had an affair with Cole’s wife. Cole was acquitted in a second trial and lived out his life."
+                        },
+                        {
+                            name: "Boss Tweed (William M. Tweed)",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/boss-tweed.png",
+                            description: "He had room number 450 assigned for many years when he ran Tammany Hall. "
+                        }
+                    ]
+                },
+                {
+                    doorOneText: "Ten Eyck",
+                    doorTwoText: "Hotel",
+                    hotelName: "Ten Eyck Hotel",
+                    hotelLocation: "NW corner State & North Pearl St.",
+                    hotelImage: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/ten-eyck-hotel.png",
+                    hotelDescription: "This hotel was known as the “Republican’s Hotel” but it was popular with Democrats also.",
+                    hotelGuests: [
+                        {
+                            name: "Dan Button",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dan-button.png",
+                            description: "In the 1960s, Dan Button, who crusaded against the O’Connell-Corning machine, had his congressional ofﬁce here. "
+                        },
+                        {
+                            name: "William Randolph Hearst",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/william-hearst.png",
+                            description: "A former Democratic representative, he decided to leave the Party and join the Independence League while at Ten Eyck. "
+                        }
+                    ]
+                },
+                {
+                    doorOneText: "DeWitt Clinton",
+                    doorTwoText: "Hotel",
+                    hotelName: "DeWitt Clinton Hotel",
+                    hotelLocation: "144 State St. - Currently Renaissance Albany Hotel",
+                    hotelImage: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dewitt-clinton-hotel.jpg",
+                    hotelDescription: "It was known as the “Democrat’s Hotel”. Candidates were often voted on by party leaders and it was the home of many lobbyists. Governors spoke here. Meetings were held in back rooms. The bar was often the scene of local, state, and national agreements being made.",
+                    hotelGuests: [
+                        {
+                            name: "Dan O’Connell",
+                            image: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dan-connell.png",
+                            description: "He was an Albany Boss who had an ofﬁce here. In 1946 the Saturday Evening Post did a series on American cities and portrayed Albany in a negative light. O’Connell purchased every copy in the city so no one could read it and stashed them all at the hotel. "
+                        }
+                    ]
+                },
+            ]
+
             const ICON_LINKS = Object.freeze({
                 DELEVAN_NORMAL: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/delevan-house-normal.png",
                 DELEVAN_HOVER: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/delevan-house-hover.png",
@@ -48,7 +155,7 @@
             switch (currentSelection) {
                 case "delevan":
                     HOTEL_IMAGE = "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/delevan-house.png"
-                    HOTEL_NAME = "Delevan House"
+                    HOTEL_NAME = "Delavan House"
                     HOTEL_LOCATION = "Previously located on East side Broadway between Columbia & Steuben; The hotel burned down on December 30, 1894 while around 20 politicians were staying here (they all escaped but 15 hotel workers perished)."
                     HOTEL_KNOWN_FOR = "This hotel has been a popular spot for lobbyists and politicians of both parties for over 40 years. It's famous for bribery and graft amongst its guests during the Tammany Hall era."
                     HOTEL_VIP_GUESTS = [
@@ -130,7 +237,7 @@
                     break;
                 case "dewitt":
                     HOTEL_IMAGE = "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dewitt-clinton-hotel.jpg"
-                    HOTEL_NAME = "Dewitt Clinton Hotel"
+                    HOTEL_NAME = "DeWitt Clinton Hotel"
                     HOTEL_LOCATION = "144 State St. - Currently Renaissance Albany Hotel"
                     HOTEL_KNOWN_FOR = "The DeWitt Clinton was known as the “Democrat’s Hotel” and was the center for state, county, and local Democrats who made deals in the famous Crystal Ballroom. Just minutes from the Capitol, lobbyists & lawmakers would mingle in the lobby with drinks in hand. Candidates were often voted on by party leaders here and it was the home of many lobbyists. Governors spoke here, meetings were held in back rooms, and at the bar were often the scene of local, state, and national agreements being made. "
                     HOTEL_VIP_GUESTS = [
@@ -223,12 +330,32 @@
 
                     <p className="introduction-text">Albany’s hotels are part of the city’s character.  As a center for business and politics, even before becoming the state capital, the city’s hotels attracted tourists, business people, and politicians needing a place to stay.</p>
 
-                    <div class="toggle-and-views">
+                    <div className="toggle-and-views">
+
                         <div className="header-section">
                             <p className="teaser-text">What happened <span style={{ color: "#9933cc" }}>behind closed doors</span> in some of the more notorious hotels in Albany?
                             </p>
                             <p className="directions"><b>Click on a door to explore the story within.</b></p>
                         </div>
+
+                        {
+                            hotels.map((hotel) => {
+                                return (
+                                    <div id="banner">
+                                        <div className="hotel-content">
+                                            <img src={hotel.hotelImage} className="img-fluid w-100 hotel-image" alt={hotel.hotelName} />
+                                            <div className="hotel-details">
+                                                <p className="hotel-title">{hotel.hotelName}</p>
+                                                <p className="hotel-description">{hotel.hotelDescription}</p>
+                                            </div>
+                                        </div>
+                                        <div className="doorHoverLeft"><span className="doorText">{hotel.doorOneText}</span></div>
+                                        <div className="doorHoverRight"><span className="doorText">{hotel.doorTwoText}</span></div>
+                                    </div>
+                                )
+                            })
+                        }
+
                         <div className="toggle-view-div d-flex align-items-center justify-content-center">
                             <div className="card-group icon-card-group">
                                 <div className="card icon-card" onClick={() => handleClick("delevan")}>
