@@ -314,6 +314,16 @@
                 setCurrentSelection(value)
             }
 
+            const [modalTitle, setModalTitle] = useState('')
+            const [modalImage, setModalImage] = useState('')
+            const [modalDescription, setModalDescription] = useState('')
+
+            const handleModalDataUpdate = (title, image, description) => {
+                setModalTitle(title)
+                setModalImage(image)
+                setModalDescription(description)
+            }
+
             return (
                 <>
                     <nav className="albany-room-breadcrumbs" aria-label="breadcrumb" style={{ maxWidth: "100%", margin: "auto" }}>
@@ -347,8 +357,33 @@
                                             <div className="hotel-details">
                                                 <p className="hotel-title">{hotel.hotelName}</p>
                                                 <p className="hotel-description">{hotel.hotelDescription}</p>
+                                                <div className="vip-section">
+                                                    <p className="vip-title">VIP Guests</p>
+                                                    <div className="guest-list">
+                                                        {hotel.hotelGuests.map((guest) => {
+                                                            return <button type="button" data-toggle="modal" data-target="#guestModal" className="guest-button" onClick={() => handleModalDataUpdate(guest.name, guest.image, guest.description)}><img className="guest-thumbnail" src={guest.image} /></button>
+                                                        })}
+                                                    </div>
+                                                    <div className="modal fade" id="guestModal" tabindex="-1" role="dialog" aria-labelledby="guestModalLabel" aria-hidden="true">
+                                                        <div className="modal-dialog" role="document">
+                                                            <div className="modal-content">
+                                                                <div className="modal-header">
+                                                                    <h5 className="modal-title" id="guestModalLabel">{modalTitle}</h5>
+                                                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span className="x-button" aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div className="modal-body">
+                                                                    <p>{modalDescription}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
+
                                         <div className="doorHoverLeft"><span className="doorText">{hotel.doorOneText}</span></div>
                                         <div className="doorHoverRight"><span className="doorText">{hotel.doorTwoText}</span></div>
                                     </div>

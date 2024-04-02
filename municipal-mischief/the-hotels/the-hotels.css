@@ -162,8 +162,8 @@ Content
 }
 
 .hotel-title {
-  margin-top: 40px !important;
-  margin-bottom: 40px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
   color: white !important;
   font-family: "Gotham Medium" !important;
   font-size: 30px !important;
@@ -333,27 +333,6 @@ GuestCards
   color: #202020;
 }
 
-/* Toggle and Views Section */
-.vip-section {
-  background-color: #f0f0f0 !important;
-  border-radius: 16px !important;
-  padding-right: 40px !important;
-  padding-left: 40px !important;
-  padding-top: 40px !important;
-  padding-bottom: 60px !important;
-  margin-top: 60px !important;
-  margin-left: 75px !important;
-  margin-bottom: 80px !important;
-}
-@media (max-width: 450px) {
-  .vip-section {
-    border-top-right-radius: 0px !important;
-    border-top-left-radius: 0px !important;
-    margin-top: 0px !important;
-    margin-left: 0px !important;
-  }
-}
-
 .vip-directions {
   color: #202020;
 }
@@ -421,4 +400,33 @@ GuestCards
 }
 #banner:hover .doorHoverRight {
   right: -50%;
+}
+
+.vip-section {
+  display: block;
+}
+@media (max-width: 450px) {
+  .vip-section {
+    display: none;
+  }
+}
+
+.vip-title {
+  text-align: left;
+  color: white;
+  font-family: "Gotham Medium";
+  font-size: 18px;
+}
+
+.guest-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.guest-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px !important;
+  cursor: pointer;
 }
