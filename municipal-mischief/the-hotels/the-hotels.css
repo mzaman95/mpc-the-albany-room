@@ -405,7 +405,7 @@ GuestCards
 .vip-section {
   display: block;
 }
-@media (max-width: 450px) {
+@media (max-width: 1199px) {
   .vip-section {
     display: none;
   }
@@ -416,6 +416,7 @@ GuestCards
   color: white;
   font-family: "Gotham Medium";
   font-size: 18px;
+  margin-bottom: 0px !important;
 }
 
 .guest-list {
@@ -425,8 +426,54 @@ GuestCards
 }
 
 .guest-thumbnail {
-  width: 80px;
-  height: 80px;
+  width: 70px !important;
+  height: 90px !important;
   border-radius: 16px !important;
   cursor: pointer;
+}
+
+.guest-button {
+  width: 80px;
+  height: 90px;
+  padding: 0px !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Modal */
+.modal {
+  font-family: "Gotham";
+  border-radius: 16px !important;
+}
+
+.modal-header {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  background-color: #9933cc;
+  color: white;
+}
+
+.modal-content {
+  border-radius: 16px !important;
+}
+
+.modal-title {
+  color: white !important;
+  font-family: "Gotham Medium", sans-serif;
+  margin-bottom: -10px !important;
+  margin-top: 10px !important;
+}
+
+.x-button {
+  color: white;
+}
+
+.modal-body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  color: #202020;
+}
+
+.modal-body p {
+  margin-bottom: 0px !important;
 }

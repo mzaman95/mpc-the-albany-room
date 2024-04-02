@@ -118,7 +118,7 @@
                     hotelName: "DeWitt Clinton Hotel",
                     hotelLocation: "144 State St. - Currently Renaissance Albany Hotel",
                     hotelImage: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/dewitt-clinton-hotel.jpg",
-                    hotelDescription: "It was known as the “Democrat’s Hotel”. Candidates were often voted on by party leaders and it was the home of many lobbyists. Governors spoke here. Meetings were held in back rooms. The bar was often the scene of local, state, and national agreements being made.",
+                    hotelDescription: "It was known as the “Democrat’s Hotel”. Governors spoke here. Meetings were held in back rooms. The bar was often the scene of local, state, and national agreements being made.",
                     hotelGuests: [
                         {
                             name: "Dan O’Connell",
@@ -361,7 +361,7 @@
                                                     <p className="vip-title">VIP Guests</p>
                                                     <div className="guest-list">
                                                         {hotel.hotelGuests.map((guest) => {
-                                                            return <button type="button" data-toggle="modal" data-target="#guestModal" className="guest-button" onClick={() => handleModalDataUpdate(guest.name, guest.image, guest.description)}><img className="guest-thumbnail" src={guest.image} /></button>
+                                                            return <button type="button" data-toggle="modal" data-target="#guestModal" className="guest-button" onClick={() => handleModalDataUpdate(guest.name, guest.image, guest.description)}><img className="guest-thumbnail" src={guest.image}></img></button>
                                                         })}
                                                     </div>
                                                     <div className="modal fade" id="guestModal" tabindex="-1" role="dialog" aria-labelledby="guestModalLabel" aria-hidden="true">
