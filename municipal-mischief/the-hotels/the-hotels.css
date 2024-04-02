@@ -422,14 +422,18 @@ GuestCards
 .guest-list {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 14px;
 }
 
 .guest-thumbnail {
   width: 70px !important;
   height: 90px !important;
+  border: 5px solid #555 !important;
   border-radius: 16px !important;
   cursor: pointer;
+}
+.guest-thumbnail:hover {
+  border: 5px solid #9933cc !important;
 }
 
 .guest-button {
@@ -476,4 +480,10 @@ GuestCards
 
 .modal-body p {
   margin-bottom: 0px !important;
+}
+
+.modal-image {
+  border-radius: 16px !important;
+  height: 400px !important;
+  margin-bottom: 20px !important;
 }
