@@ -39,7 +39,7 @@
             const [lawmakers, setLawmakers] = useState([])
 
             useEffect(() => {
-                fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2024/03/law-challenged-lawmakers.json")
+                fetch("https://museumofpoliticalcorruption.org/wp-content/uploads/2024/04/law-challenged-lawmakers.json")
                     .then(response => response.json())
                     .then(data => {
                         setCriminalData(data)
