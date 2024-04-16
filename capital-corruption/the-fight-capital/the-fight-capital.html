@@ -48,14 +48,16 @@
                 MORELAND_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/moreland.png",
                 JCOPE_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/jcope-active.png",
                 JCOPE_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/jcope.png",
-                CELIG_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/celig-active.png",
-                CELIG_INACIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/celig.png"
+                CELIG_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/04/coelig.png",
+                CELIG_INACIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/04/coelig_inactive.png"
             });
 
 
-            let COMMITTEE_TITLE = ""
-            let COMMITTEE_IMG = ""
-            let COMMITTEE_CONTENT = '';
+            let COMMITTEE_TITLE = ''
+            let COMMITTEE_IMG = ''
+            let COMMITTEE_CONTENT = ''
+            let LEARN_MORE_TXT = ''
+            let LEARN_MORE_LINK = ''
             switch (currentSelection) {
                 case "hofstadter":
                     COMMITTEE_TITLE = "The Hofstadter Commission"
@@ -73,9 +75,11 @@
                     COMMITTEE_CONTENT = "The Joint Commission on Public Ethics (JCOPE) was created in New York in 2011. It was established with the passage of the Public Integrity Reform Act of 2011, which was signed into law by then-Governor Andrew Cuomo.  JCOPE was formed to consolidate and oversee ethics enforcement in the state and was tasked with promoting transparency, integrity, and accountability in government, as well as enforcing ethics laws and regulations.  It came under criticism because it was controlled by the governor and because of the political way in which its members were selected.  "
                     break;
                 case "celig":
-                    COMMITTEE_TITLE = "CELIG (Commission on Ethics and Lobbying in Government)"
+                    COMMITTEE_TITLE = "COELIG (Commission on Ethics and Lobbying in Government)"
                     COMMITTEE_IMG = "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/03/CELIG.png"
                     COMMITTEE_CONTENT = "The Commission on Ethics and Lobbying in Government was created in 2022 to replace JCOPE.  According to its website, its mission is to oversee, regulate and ensure compliance with New York State’s ethics and lobbying laws. It has broad authority over Statewide elected officials, candidates for those offices, executive branch officers and employees, members of the Legislature and legislative branch employees and candidates, as well as certain political party chairs, and registered lobbyists and their clients. The Commission provides information, education, and advice regarding current ethics and lobbying laws and promotes compliance through training, guidance, disclosure, audits, investigations and enforcement proceedings. "
+                    LEARN_MORE_TXT = 'To learn more about COELIG, see '
+                    LEARN_MORE_LINK = 'https://ethics.ny.gov/'
                     break;
             }
 
@@ -165,6 +169,9 @@
                             <p className="committee-title">{COMMITTEE_TITLE}</p>
                             <p className="committee-details">{COMMITTEE_CONTENT}</p>
                             {COMMITTEE_IMG && <div className="img-container"><img className="committee-img" src={COMMITTEE_IMG} /></div>}
+                            {LEARN_MORE_LINK && <div><p class="learn-more">Learn More</p><p className="learn-more-text">{LEARN_MORE_TXT} <a
+                                href={LEARN_MORE_LINK} target="_blank"
+                                class="breadcrumb-item inactive-link">here</a>.</p></div>}
                         </div>}
                     </div>
 

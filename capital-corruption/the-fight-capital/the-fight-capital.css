@@ -166,3 +166,18 @@ Content
   font-size: 16px !important;
   color: #202020;
 }
+
+.learn-more {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #9933cc;
+  margin-bottom: 20px !important;
+  margin-top: 40px;
+}
+
+.learn-more-text {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  color: #202020;
+}
