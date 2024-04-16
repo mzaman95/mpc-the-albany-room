@@ -51,7 +51,9 @@
 
             let COMMITTEE_TITLE = ""
             let COMMITTEE_IMG = ""
-            let COMMITTEE_CONTENT = '';
+            let COMMITTEE_CONTENT = ''
+            let LEARN_MORE_TXT = ""
+            let LEARN_MORE_LINK = ''
             switch (currentSelection) {
                 case "com13":
                     COMMITTEE_TITLE = "The Committee of 13"
@@ -61,7 +63,9 @@
                 case "brothers":
                     COMMITTEE_TITLE = "The Brothers"
                     COMMITTEE_IMG = ""
-                    COMMITTEE_CONTENT = "The Brothers was a civil rights organization in Albany  in the 1960s who  advocated against employment discrimination, political corruption, and inequities in housing and health care."
+                    COMMITTEE_CONTENT = "The Brothers was a civil rights group that was active in Albany beginning in the mid 1960s.  It was centered in the African-American communities of Albany's South End and Arbor Hill.  The Brothers used protests, education, voter registration and other non-violent means to rail against issues prevalent to the community:  poverty, poor access to health care, inadequate housing conditions, police brutality, lack of jobs, and the oppression of Albany's political machine."
+                    LEARN_MORE_TXT = "To learn more about The Brothers, see "
+                    LEARN_MORE_LINK = 'https://archives.albany.edu/description/catalog/apap081#:~:text=Biographical%20%2F%20Historical%3A-,The%20Brothers%20was%20a%20civil%20rights%20group%20that%20was%20active,End%20and%20Arbor%20Hill%20neighborhoods'
                     break;
             }
 
@@ -122,6 +126,9 @@
                             <p className="committee-title">{COMMITTEE_TITLE}</p>
                             <p className="committee-details">{COMMITTEE_CONTENT}</p>
                             {COMMITTEE_IMG && <div className="img-container"><img className="committee-img" src={COMMITTEE_IMG} /></div>}
+                            {LEARN_MORE_LINK && <div><p class="learn-more">Learn More</p><p className="learn-more-text">{LEARN_MORE_TXT} <a
+                                href={LEARN_MORE_LINK} target="_blank"
+                                class="breadcrumb-item inactive-link">here</a>.</p></div>}
                         </div>}
                     </div>
 
