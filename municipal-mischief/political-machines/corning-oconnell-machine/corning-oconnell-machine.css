@@ -78,5 +78,6 @@ Breadcrumbs
 }
 
 .beer-img {
+  max-width: 50% !important;
   border-radius: 16px !important;
 }
