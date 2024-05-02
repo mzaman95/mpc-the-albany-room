@@ -112,35 +112,5 @@
         "date": "Convicted in 2015"
       }
     ]
-  },
-  {
-    "id": "C5",
-    "name": "Sex Scandals",
-    "lawmakers": [
-      {
-        "name": "Dennis H. Gabryszak",
-        "subtitle": "Assemblyman",
-        "description": "Resigned after being accused of sexual harassment by members of his staff.",
-        "date": "Resigned in 2014"
-      },
-      {
-        "name": "Sam Hoyt",
-        "subtitle": "Assemblyman",
-        "description": "Banned from having interns in his office after having an affair with an intern.",
-        "date": "Banned in 2008"
-      },
-      {
-        "name": "Micah Z. Kellner",
-        "subtitle": "Assemblyman, Manhattan",
-        "description": "Sanctioned for sexually harassing members of his staff.",
-        "date": "Sanctioned in 2013"
-      },
-      {
-        "name": "Vito J. Lopez",
-        "subtitle": "Assemblyman, Brooklyn",
-        "description": "Sanctioned by the Legislative Ethics Commission for sexually harassing members of his staff; he was stripped of  seniority and forbidden from employing interns under the age of 21.",
-        "date": "Sanctioned in 2013"
-      }
-    ]
   }
 ]
