@@ -45,7 +45,10 @@
                 COM13_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/com-13-active.png",
                 COM13_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/com-13-inactive.png",
                 BROTHERS_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/bro-active.png",
-                BROTHERS_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/bro-inactive.png"
+                BROTHERS_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2023/10/bro-inactive.png",
+                DANB_ACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/06/DanButton_purple.png",
+                DANB_INACTIVE: "https://museumofpoliticalcorruption.org/wp-content/uploads/2024/06/DanButton_white.png"
+
             });
 
 
@@ -67,6 +70,11 @@
                     LEARN_MORE_TXT = "To learn more about The Brothers, see "
                     LEARN_MORE_LINK = 'https://archives.albany.edu/description/catalog/apap081#:~:text=Biographical%20%2F%20Historical%3A-,The%20Brothers%20was%20a%20civil%20rights%20group%20that%20was%20active,End%20and%20Arbor%20Hill%20neighborhoods'
                     break;
+                case "danb":
+                    COMMITTEE_TITLE = "The Story of Dan Button"
+                    COMMITTEE_IMG = ""
+                    COMMITTEE_CONTENT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    break;
             }
 
 
@@ -84,6 +92,14 @@
 
             function brothersInactive(e) {
                 e.target.src = ICON_LINKS.BROTHERS_INACTIVE
+            }
+
+            function danbActive(e) {
+                e.target.src = ICON_LINKS.DANB_ACTIVE
+            }
+
+            function danbInactive(e) {
+                e.target.src = ICON_LINKS.DANB_INACTIVE
             }
 
             const handleClick = (value) => {
@@ -104,7 +120,7 @@
 
                     <p className="page-title">The Fight Against Corruption</p>
 
-                    <p className="introduction-text">The fight against political corruption has a history as long as corruption itself.</p>
+                    <p className="introduction-text">In Albany, honest politicians and concerned citizens alike recognized the destructive influence of corruption in politics on the city and its inhabitants and devised methods to challenge it.</p>
 
                     <div className="toggle-and-views">
                         <div className="header-section">
@@ -119,6 +135,10 @@
 
                                 <div className="card icon-card" onClick={() => handleClick("brothers")}>
                                     <img className="card-img-top" src={(currentSelection == "brothers") ? ICON_LINKS.BROTHERS_ACTIVE : ICON_LINKS.BROTHERS_INACTIVE} alt="The Brothers" onMouseEnter={brothersActive} onMouseLeave={(currentSelection == "brothers") ? brothersActive : brothersInactive} />
+                                </div>
+
+                                <div className="card icon-card" onClick={() => handleClick("danb")}>
+                                    <img className="card-img-top" src={(currentSelection == "danb") ? ICON_LINKS.DANB_ACTIVE : ICON_LINKS.DANB_INACTIVE} alt="The Story of Dan Button" onMouseEnter={danbActive} onMouseLeave={(currentSelection == "danb") ? danbActive : danbInactive} />
                                 </div>
                             </div>
                         </div>
